@@ -1,0 +1,37 @@
+<!doctype html>
+<html
+    lang="{{ site.Language.LanguageCode }}"
+    dir="{{ or site.Language.LanguageDirection `ltr` }}"
+>
+    <head>
+        {{ partial "head.html" . }}
+    </head>
+    <body>
+        <header>{{ partial "header.html" . }}</header>
+        <div class="flex justify-center">
+            <img src="/border-home1.png" alt="border-home1" />
+        </div>
+        <main>
+            <div class="mx-auto w-full max-w-4xl px-4 py-6">
+                {{ block "main" . }}{{ end }}
+            </div>
+        </main>
+        {{ if .IsHome }}
+        {{ with site.GetPage "section" "experience" }}
+        <section class="mx-auto w-full max-w-4xl px-4 py-4 mt-8">
+            <div class="not-prose mb-4">
+                <h2 class="text-xl font-bold text-white">{{ .Title }}</h2>
+                <a class="text-sm text-white underline" href="{{ .RelPermalink }}">查看完整简历 →</a>
+            </div>
+            <div class="rounded-lg border border-white p-6">
+                {{ .Content }}
+            </div>
+        </section>
+        {{ end }}
+        {{ end }}
+        <div class="flex justify-center">
+            <img src="/border-home1.png" alt="border-home1" />
+        </div>
+        <footer>{{ partial "footer.html" . }}</footer>
+    </body>
+</html>

@@ -1,0 +1,8 @@
+node_modules/
+public/
+.vs/
+.hugo_build.lock
+
+my-portfolio/node_modules/
+my-portfolio/public/
+my-portfolio/.hugo_build.lock

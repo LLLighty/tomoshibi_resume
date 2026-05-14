@@ -1,0 +1,14 @@
+# 基础设置
+baseURL = "http://example.com/"
+languageCode = "zh-CN"
+title = "小灯的个人空间"
+#theme = "digio-theme" # 这里保持不变，告诉 Hugo 主题叫这个名字
+
+[module]
+  [[module.imports]]
+    path = "github.com/danapixels/digio-theme"
+
+  # 2. 添加 mounts 配置，将模块映射为 theme 名字
+  [[module.mounts]]
+    source = "github.com/danapixels/digio-theme"
+    target = "themes/digio-theme"

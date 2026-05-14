@@ -1,0 +1,15 @@
+<!-- 引入中文字体 Zpix (最像素) -->
+<link href="https://fonts.googleapis.com/css2?family=Zpix&display=swap" rel="stylesheet">
+
+<!-- 设置全局像素字体样式 -->
+<style>
+    body, nav, a, p, h1, h2, h3, h4, h5, h6, li {
+        font-family: 'Zpix', 'Fira Code', monospace !important;
+    }
+</style>
+
+<header class="py-6 px-6">
+    <div class="flex justify-start items-center">
+    {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+</div>
+</header>
