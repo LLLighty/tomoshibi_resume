@@ -117,7 +117,7 @@
               <h2 class="text-xl font-semibold">
                 <span class="text-white flex items-center">
                   {{ with $icon }}
-                    <img src="{{ . }}" alt="" class="mr-2">
+                    <img src="{{ . | replaceRE "^/" "" | relURL }}" alt="" class="mr-2">
                   {{ end }}
 
                   {{ $post.LinkTitle }}
@@ -152,7 +152,7 @@
                 <span class="text-white flex items-center">
 
                   {{ with $link.icon }}
-                    <img src="{{ . }}" alt="" class="mr-2">
+                    <img src="{{ . | replaceRE "^/" "" | relURL }}" alt="" class="mr-2">
                   {{ end }}
 
                   {{ $link.title }}

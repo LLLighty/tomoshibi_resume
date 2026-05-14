@@ -2,7 +2,7 @@
 {{ $p := .Params }}
 <div class="grid lg:grid-cols-2 gap-4">
 	<div class="not-prose flex cursor-default flex-col space-y-4 rounded-lg border border-white p-4">
-		<img src="{{ or $p.portraitImage "/portrait.png" }}" alt="Portrait" class="w-full h-auto">
+		<img src="{{ (or $p.portraitImage "/portrait.png") | replaceRE "^/" "" | relURL }}" alt="Portrait" class="w-full h-auto">
 		<div>
 			{{ with $p.introTitle }}<strong>{{ . }}</strong>{{ end }}
 			{{ with $p.introBody }}{{ . | markdownify }}{{ end }}
@@ -10,7 +10,7 @@
 	</div>
 	<div class="grid lg:grid-rows-2 gap-4">
 		<div class="not-prose flex cursor-default flex-col space-y-2 rounded-lg border border-white p-6">
-			<img src="{{ or $p.statusImage "/status.png" }}" alt="Status" class="self-start">
+			<img src="{{ (or $p.statusImage "/status.png") | replaceRE "^/" "" | relURL }}" alt="Status" class="self-start">
 			{{ with $p.statusText }}<div>{{ . | markdownify }}</div>{{ end }}
 		</div>
 		<div class="not-prose flex cursor-default flex-col space-y-4 rounded-lg border border-white p-6">
@@ -20,8 +20,9 @@
 				{{ with $p.musicArtist }}<p class="m-0 text-sm">{{ . }}</p>{{ end }}
 			</div>
 			{{ with $p.musicFile }}
-				<audio class="w-full" controls preload="metadata" src="{{ . }}">
-					<a href="{{ . }}">播放音乐</a>
+				{{ $musicFile := . | replaceRE "^/" "" | relURL }}
+				<audio class="w-full" controls preload="metadata" src="{{ $musicFile }}">
+					<a href="{{ $musicFile }}">播放音乐</a>
 				</audio>
 			{{ end }}
 		</div>

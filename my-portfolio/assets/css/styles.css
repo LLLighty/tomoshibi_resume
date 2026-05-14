@@ -140,7 +140,7 @@ input[type="checkbox"] {
   appearance: none;
   width: 16px;
   height: 16px;
-  background-image: url('/checkbox.png');
+  background-image: url('../checkbox.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -150,7 +150,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked {
-  background-image: url('/checked.png');
+  background-image: url('../checked.png');
 }
 
 input[type="email"] {
@@ -176,7 +176,7 @@ ul li::before {
   top: 0.7em;
   width: 8px;
   height: 8px;
-  background-image: url('/sparkle.png');
+  background-image: url('../sparkle.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
