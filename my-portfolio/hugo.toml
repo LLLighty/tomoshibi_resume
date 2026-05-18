@@ -8,7 +8,7 @@ title ='₊‧꒰ა欢迎来到小灯的个人网站໒꒱ ‧₊'
     pageRef = '/'
     weight = 1
     [menus.main.params]
-      image = '/digigarden2025.png'
+      image = '/Lighty.png'
 
   [[menus.main]]
     name = '简历'
