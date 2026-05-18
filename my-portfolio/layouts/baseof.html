@@ -21,7 +21,7 @@
         <section class="mx-auto w-full max-w-4xl px-4 py-4 mt-8">
             <div class="not-prose mb-4">
                 <h2 class="text-xl font-bold text-white">{{ .Title }}</h2>
-                <a class="text-sm text-white underline" href="{{ .RelPermalink }}">查看完整简历 →</a>
+                <a class="text-sm text-white underline" href="{{ "files/tong-tianqi-resume.pdf" | relURL }}" download>点击下载我的简历 →</a>
             </div>
             <div class="rounded-lg border border-white p-6">
                 {{ .Content }}
