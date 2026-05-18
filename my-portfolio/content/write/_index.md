@@ -1,3 +1,3 @@
 +++
-title = "⋅˚₊‧ ୨ thoughts index ୧ ‧₊˚ ⋅"
+title = "作品集"
 +++
