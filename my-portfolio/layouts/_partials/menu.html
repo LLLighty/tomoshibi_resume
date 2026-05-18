@@ -37,7 +37,7 @@
           {{- end -}}
         >
           {{- if .Params.image }}
-            <img src="{{ .Params.image | replaceRE "^/" "" | relURL }}" alt="{{ $name }}">
+            <img src="{{ .Params.image | replaceRE "^/" "" | relURL }}" alt="{{ $name }}" style="width: 13px; height: 13px; object-fit: contain;">
           {{- else }}
             {{ $name }}
           {{- end }}
