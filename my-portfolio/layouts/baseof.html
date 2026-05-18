@@ -19,11 +19,17 @@
         {{ if .IsHome }}
         {{ with site.GetPage "section" "experience" }}
         <section class="mx-auto w-full max-w-4xl px-4 py-4 mt-8">
+            <style>
+                .home-work-experience h3,
+                .home-work-experience h3 + p strong {
+                    color: rgba(255, 188, 226, 0.82);
+                }
+            </style>
             <div class="not-prose mb-4">
                 <h2 class="text-xl font-bold text-white">⋅˚₊‧ 工作经历 ୧ ‧₊˚ ⋅</h2>
                 <a class="text-sm text-white underline" href="{{ "files/tong-tianqi-resume.pdf" | relURL }}" download>点击下载我的简历 →</a>
             </div>
-            <div class="rounded-lg border border-white p-6">
+            <div class="home-work-experience rounded-lg border border-white p-6">
                 <h2>2025.04-2026.6（实习转正）</h2>
                 <h3>上海乐竞英雄体育科技有限公司（VSPO英雄电竞）</h3>
                 <p><strong>系统/玩法策划</strong></p>
