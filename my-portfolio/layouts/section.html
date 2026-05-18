@@ -1,10 +1,23 @@
 {{ define "main" }}
 <div class="mx-auto w-full max-w-4xl px-4 py-6">
   
-  <h1 class="text-3xl font-bold mb-8">{{ .Title }}</h1>
+  <h1 class="text-3xl font-bold mb-8{{ if eq .RelPermalink ("experience/" | relURL) }} resume-title{{ end }}">{{ .Title }}</h1>
 
   {{ if eq .RelPermalink ("experience/" | relURL) }}
     <style>
+      .resume-title {
+        color: #ff3fbd;
+        text-shadow: 0 0 8px rgba(255, 63, 189, 0.55);
+      }
+
+      .resume-content h2 {
+        color: rgba(255, 145, 212, 0.9);
+      }
+
+      .resume-content h3 + p strong {
+        color: rgba(255, 188, 226, 0.82);
+      }
+
       .resume-content hr {
         border: 0;
         height: 1px;
