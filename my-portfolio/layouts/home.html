@@ -41,11 +41,15 @@
 	</div>
 	<div class="project-grid">
 		{{ range $p.featuredProjects }}
+			{{ $caseHref := .href }}
+			{{ if hasPrefix $caseHref "/" }}
+				{{ $caseHref = $caseHref | replaceRE "^/" "" | relURL }}
+			{{ end }}
 			<article class="portfolio-card project-card">
 				<p class="project-tags">{{ .tags }}</p>
 				<h3>{{ .title }}</h3>
 				<p>{{ .summary }}</p>
-				<a class="case-link" href="{{ .href }}">查看案例</a>
+				<a class="case-link" href="{{ $caseHref }}">查看案例</a>
 			</article>
 		{{ end }}
 	</div>

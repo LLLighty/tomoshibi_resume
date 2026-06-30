@@ -50,7 +50,7 @@ value = "▸ 交互设计\n▸ 关卡设计\n▸ 引擎技术"
 title = "VTKD & 代号TFG"
 tags = "商业项目 / VR / Gameplay"
 summary = "与世界跆拳道协会与Refract合作的VR格斗游戏项目。负责设计局外音游玩法的核心循环，包括音符交互、评分、连击、血量与玩家反馈。"
-href = "#"
+href = "/write/vspo-tfg/"
 
 [[featuredProjects]]
 title = "UGC 谱面编辑器"

@@ -1,0 +1,121 @@
+{{ define "main" }}
+{{ $video := .Params.video | replaceRE "^/" "" | relURL }}
+{{ $pdf := .Params.pdf | replaceRE "^/" "" | relURL }}
+
+<article class="case-study">
+  <header class="case-hero">
+    <p class="eyebrow">{{ .Params.subtitle }}</p>
+    <h1>{{ .Title }}</h1>
+  </header>
+
+  <section class="portfolio-card media-card">
+    <video controls preload="metadata" playsinline>
+      <source src="{{ $video }}" type="video/mp4">
+      <a href="{{ $video }}">查看 Demo 视频</a>
+    </video>
+  </section>
+
+  <div class="button-row case-actions">
+    <a class="pixel-button" href="{{ $pdf }}" target="_blank" rel="noopener noreferrer">查看系统文档</a>
+    <a class="pixel-button" href="{{ $pdf }}" download>下载 PDF</a>
+  </div>
+
+  <section class="case-grid">
+    <div class="portfolio-card">
+      <h2>项目概览</h2>
+      <p>基于 VR 跆拳道动作的节奏玩法模式。玩家根据节奏与视觉提示，用规定身体部位击打 Note 或躲避 Block。</p>
+      <p>系统通过 Timing、命中部位、方向偏移、Combo、生命值等规则形成评分与失败判定。</p>
+    </div>
+    <div class="portfolio-card">
+      <h2>我的职责</h2>
+      <ul>
+        <li>系统玩法设计</li>
+        <li>核心规则设计</li>
+        <li>判定与得分规则设计</li>
+        <li>玩家反馈设计</li>
+        <li>文档撰写与跨岗位沟通</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="portfolio-card">
+    <h2>设计目标</h2>
+    <div class="compact-grid">
+      <p>为非专业玩家和跆拳道运动员提供局外训练 / 娱乐玩法。</p>
+      <p>用关卡机制降低学习门槛，让动作目标更直观。</p>
+      <p>为后续 UGC 谱面编辑器与异步 PVP 提供基础规则。</p>
+    </div>
+  </section>
+
+  <section class="portfolio-card">
+    <h2>核心玩法循环</h2>
+    <div class="flow-row">
+      <span>音乐开始</span>
+      <span>Note / Block 生成</span>
+      <span>玩家完成动作</span>
+      <span>命中与 Timing 判定</span>
+      <span>Combo / 分数 / 生命值反馈</span>
+      <span>结算评级</span>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="case-section-title">系统拆解</h2>
+    <div class="module-grid">
+      <div class="portfolio-card module-card">
+        <h3>Note</h3>
+        <p>承载击打目标、身体部位、方向与 Timing 信息。</p>
+      </div>
+      <div class="portfolio-card module-card">
+        <h3>Block</h3>
+        <p>要求玩家躲避或调整身体位置，打破单纯击打节奏。</p>
+      </div>
+      <div class="portfolio-card module-card">
+        <h3>Chart</h3>
+        <p>组织谱面节奏、目标类型、生成时机与关卡难度。</p>
+      </div>
+      <div class="portfolio-card module-card">
+        <h3>音轨运动</h3>
+        <p>定义目标移动轨迹、抵达节奏点和玩家预判时间。</p>
+      </div>
+      <div class="portfolio-card module-card">
+        <h3>判定系统</h3>
+        <p>检查命中部位、方向偏移、Timing 窗口与动作完成度。</p>
+      </div>
+      <div class="portfolio-card module-card">
+        <h3>得分系统</h3>
+        <p>将命中质量转化为分数、Combo、评级与即时反馈。</p>
+      </div>
+      <div class="portfolio-card module-card">
+        <h3>生命值系统</h3>
+        <p>把失误转化为压力反馈，形成失败条件和节奏张力。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-grid">
+    <div class="portfolio-card">
+      <h2>关键设计亮点</h2>
+      <ul>
+        <li>VR 身体部位判定</li>
+        <li>方向 Note 的击入 / 击出点设计</li>
+        <li>Timing 判定窗口</li>
+        <li>Note 与 Block 的场地 / 音轨逻辑</li>
+        <li>兼顾休闲玩家与技术流玩家</li>
+      </ul>
+    </div>
+    <div class="portfolio-card doc-card">
+      <p class="eyebrow">文档展示区</p>
+      <h2>玩法与规则文档 v0.1.30</h2>
+      <p>33 页系统文档，覆盖核心规则、判定、得分、生命值与玩法反馈。</p>
+      <a class="case-link" href="{{ $pdf }}" target="_blank" rel="noopener noreferrer">查看 PDF</a>
+    </div>
+  </section>
+
+  <section class="portfolio-card">
+    <h2>设计复盘</h2>
+    <p>这个系统的价值在于把跆拳道动作训练转化为可配置、可判定、可扩展的节奏游戏结构。</p>
+    <p>它既服务局外训练与娱乐体验，也为后续 UGC 和异步玩法打下规则基础。</p>
+  </section>
+</article>
+{{ end }}
