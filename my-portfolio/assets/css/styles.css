@@ -541,6 +541,12 @@ nav a:hover {
   line-height: 1.8;
 }
 
+.case-note {
+  color: #f9a8d4;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
 .info-card dl,
 .info-card dd {
   margin: 0;
