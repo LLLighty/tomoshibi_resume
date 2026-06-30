@@ -61,7 +61,7 @@ href = "#"
 [[featuredProjects]]
 title = "三端系统架构"
 tags = "商业项目 / System Design / VR-PC"
-summary = "为 VR 电竞场景设计玩家端、裁判端与转播端之间的交互边界和工作流。"
+summary = "为 VR 电竞项目设计 Player、GM、Spectator 三端的权限边界与工作流，并将登录、设置、顶号、异常处理等基础系统整理为可配置方案。"
 href = "/write/three-client-architecture/"
 
 [[featuredProjects]]
