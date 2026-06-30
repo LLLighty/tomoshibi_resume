@@ -1,5 +1,6 @@
 {{ define "main" }}
 {{ $video := .Params.video | replaceRE "^/" "" | relURL }}
+{{ $pdf := .Params.pdf | replaceRE "^/" "" | relURL }}
 
 <article class="case-study">
   <header class="case-hero">
@@ -12,6 +13,10 @@
           <source src="{{ $video }}" type="video/mp4">
           <a href="{{ $video }}">查看大招演示视频</a>
         </video>
+        <div class="button-row media-actions">
+          <a class="pixel-button" href="{{ $pdf }}" target="_blank" rel="noopener noreferrer">预览文档文件</a>
+          <a class="pixel-button" href="{{ $pdf }}" download>下载文档文件</a>
+        </div>
       </section>
     </div>
   </header>

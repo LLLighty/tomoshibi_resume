@@ -725,6 +725,10 @@ nav a:hover {
   margin-top: 1rem;
 }
 
+.media-actions {
+  margin-top: 0.75rem;
+}
+
 .ugc-case .archive-tags {
   margin-top: 1rem;
 }
