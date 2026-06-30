@@ -11,7 +11,11 @@
 			<p>{{ or $p.heroBody "一年商业游戏开发经验，参与 VR/PC 双端格斗与节奏玩法项目，负责系统架构、玩法系统、UGC 编辑器与多端交互流程设计。" }}</p>
 			<div class="button-row">
 				{{ range $p.heroButtons }}
-					<a class="pixel-button" href="{{ .href }}">{{ .label }}</a>
+					{{ $href := .href }}
+					{{ if hasPrefix $href "/" }}
+						{{ $href = $href | replaceRE "^/" "" | relURL }}
+					{{ end }}
+					<a class="pixel-button" href="{{ $href }}">{{ .label }}</a>
 				{{ end }}
 			</div>
 		</div>
