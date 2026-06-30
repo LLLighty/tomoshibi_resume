@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-cyan-300: oklch(86.5% 0.127 207.078);
     --color-pink-300: oklch(82.3% 0.12 346.018);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
@@ -392,10 +393,10 @@
     --tw-duration: 150ms;
     transition-duration: 150ms;
   }
-  .hover\:border-pink-300 {
+  .hover\:border-cyan-300 {
     &:hover {
       @media (hover: hover) {
-        border-color: var(--color-pink-300);
+        border-color: var(--color-cyan-300);
       }
     }
   }
@@ -435,7 +436,7 @@ a {
   transition: all 0.3s ease;
 }
 a:hover:not(.block):not(.not-prose) {
-  color: #f9a8d4;
+  color: #00f5ff;
 }
 p a, li a:not(nav a), article a:not(.block) {
   text-decoration: underline;
@@ -582,7 +583,7 @@ nav a {
   text-decoration: none;
 }
 nav a:hover {
-  color: #f9a8d4;
+  color: #00f5ff;
 }
 .home-hero {
   display: grid;
@@ -615,7 +616,7 @@ nav a:hover {
   margin: 0;
 }
 .hero-subtitle, .hero-tags, .eyebrow, .project-tags {
-  color: #f9a8d4;
+  color: #00f5ff;
 }
 .hero-subtitle {
   font-size: 1rem;
@@ -651,7 +652,7 @@ nav a:hover {
   padding: 0.85rem;
 }
 .archive-stats span {
-  color: #f9a8d4;
+  color: #00f5ff;
   display: block;
   font-size: 1.35rem;
   font-weight: 700;
@@ -725,7 +726,7 @@ nav a:hover {
   display: none;
 }
 .genre-card summary span {
-  color: #f9a8d4;
+  color: #00f5ff;
   font-weight: 700;
 }
 .genre-card summary small {
@@ -754,7 +755,7 @@ nav a:hover {
   gap: 0.35rem;
 }
 .archive-filters span {
-  color: #f9a8d4;
+  color: #00f5ff;
   font-size: 0.75rem;
 }
 .archive-filters input, .archive-filters select {
@@ -768,7 +769,7 @@ nav a:hover {
   padding: 0.55rem 0.7rem;
 }
 .archive-filters input:focus, .archive-filters select:focus {
-  border-color: #f9a8d4;
+  border-color: #00f5ff;
   outline: none;
 }
 .game-entry {
@@ -787,7 +788,7 @@ nav a:hover {
   line-height: 1.5;
 }
 .archive-empty {
-  color: #f9a8d4;
+  color: #00f5ff;
 }
 .button-row {
   display: flex;
@@ -807,8 +808,8 @@ nav a:hover {
   transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 .pixel-button:hover, .case-link:hover {
-  border-color: #f9a8d4;
-  color: #f9a8d4;
+  border-color: #00f5ff;
+  color: #00f5ff;
   transform: translateY(-1px);
 }
 .snapshot-card {
@@ -825,7 +826,7 @@ nav a:hover {
   padding-left: 0.85rem;
 }
 .snapshot-list dt {
-  color: #f9a8d4;
+  color: #00f5ff;
   font-size: 0.75rem;
 }
 .snapshot-list dd {
@@ -858,7 +859,7 @@ nav a:hover {
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
 .project-card:hover {
-  border-color: #f9a8d4;
+  border-color: #00f5ff;
   transform: translateY(-2px);
 }
 .project-card h3 {
@@ -892,7 +893,7 @@ nav a:hover {
   margin: 0;
 }
 .experience-card h3, .experience-card h4 {
-  color: #f9a8d4;
+  color: #00f5ff;
 }
 .experience-card ul {
   margin-bottom: 0;
@@ -917,7 +918,7 @@ nav a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem 1rem;
-  color: #f9a8d4;
+  color: #00f5ff;
   font-size: 0.75rem;
   line-height: 1.8;
 }
@@ -942,7 +943,7 @@ nav a:hover {
   object-fit: contain;
 }
 .system-breakdown-gallery figcaption {
-  color: #f9a8d4;
+  color: #00f5ff;
   font-size: 0.75rem;
   margin-top: 0.65rem;
 }
@@ -997,7 +998,7 @@ nav a:hover {
   object-fit: cover;
 }
 .ugc-feature-card h3 {
-  color: #f9a8d4;
+  color: #00f5ff;
 }
 .ugc-feature-card p {
   color: #e5e7eb;
@@ -1049,7 +1050,7 @@ nav a:hover {
   margin-bottom: 1rem;
 }
 .module-card h3, .doc-card h2 {
-  color: #f9a8d4;
+  color: #00f5ff;
 }
 .case-hero-split {
   display: grid;
@@ -1061,7 +1062,7 @@ nav a:hover {
   line-height: 1.8;
 }
 .case-note {
-  color: #f9a8d4;
+  color: #00f5ff;
   font-size: 0.85rem;
   line-height: 1.7;
 }
@@ -1085,7 +1086,7 @@ nav a:hover {
   gap: 0.75rem;
 }
 .info-card dt {
-  color: #f9a8d4;
+  color: #00f5ff;
   font-size: 0.75rem;
 }
 .role-map, .excerpt-grid {
@@ -1101,7 +1102,7 @@ nav a:hover {
   padding: 0.75rem;
 }
 .role-map strong, .excerpt-card span {
-  color: #f9a8d4;
+  color: #00f5ff;
 }
 .role-map span, .mini-flow, .mini-table {
   color: #ffffff;
@@ -1125,7 +1126,7 @@ nav a:hover {
   vertical-align: top;
 }
 .case-table th {
-  color: #f9a8d4;
+  color: #00f5ff;
 }
 .excerpt-card {
   min-height: 120px;

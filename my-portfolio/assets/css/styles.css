@@ -1,4 +1,4 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 @source "../../layouts/**/*.html";
 @source "../../content/**/*.html";
 
@@ -30,7 +30,7 @@ a {
 }
 
 a:hover:not(.block):not(.not-prose) {
-  color: #f9a8d4;
+  color: #00f5ff;
 }
 
 p a,
@@ -214,7 +214,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #f9a8d4;
+  color: #00f5ff;
 }
 
 .home-hero {
@@ -270,7 +270,7 @@ nav a:hover {
 .hero-tags,
 .eyebrow,
 .project-tags {
-  color: #f9a8d4;
+  color: #00f5ff;
 }
 
 .hero-subtitle {
@@ -319,7 +319,7 @@ nav a:hover {
 }
 
 .archive-stats span {
-  color: #f9a8d4;
+  color: #00f5ff;
   display: block;
   font-size: 1.35rem;
   font-weight: 700;
@@ -413,7 +413,7 @@ nav a:hover {
 }
 
 .genre-card summary span {
-  color: #f9a8d4;
+  color: #00f5ff;
   font-weight: 700;
 }
 
@@ -451,7 +451,7 @@ nav a:hover {
 }
 
 .archive-filters span {
-  color: #f9a8d4;
+  color: #00f5ff;
   font-size: 0.75rem;
 }
 
@@ -469,7 +469,7 @@ nav a:hover {
 
 .archive-filters input:focus,
 .archive-filters select:focus {
-  border-color: #f9a8d4;
+  border-color: #00f5ff;
   outline: none;
 }
 
@@ -492,7 +492,7 @@ nav a:hover {
 }
 
 .archive-empty {
-  color: #f9a8d4;
+  color: #00f5ff;
 }
 
 .button-row {
@@ -517,8 +517,8 @@ nav a:hover {
 
 .pixel-button:hover,
 .case-link:hover {
-  border-color: #f9a8d4;
-  color: #f9a8d4;
+  border-color: #00f5ff;
+  color: #00f5ff;
   transform: translateY(-1px);
 }
 
@@ -539,7 +539,7 @@ nav a:hover {
 }
 
 .snapshot-list dt {
-  color: #f9a8d4;
+  color: #00f5ff;
   font-size: 0.75rem;
 }
 
@@ -580,7 +580,7 @@ nav a:hover {
 }
 
 .project-card:hover {
-  border-color: #f9a8d4;
+  border-color: #00f5ff;
   transform: translateY(-2px);
 }
 
@@ -626,7 +626,7 @@ nav a:hover {
 
 .experience-card h3,
 .experience-card h4 {
-  color: #f9a8d4;
+  color: #00f5ff;
 }
 
 .experience-card ul {
@@ -657,7 +657,7 @@ nav a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem 1rem;
-  color: #f9a8d4;
+  color: #00f5ff;
   font-size: 0.75rem;
   line-height: 1.8;
 }
@@ -686,7 +686,7 @@ nav a:hover {
 }
 
 .system-breakdown-gallery figcaption {
-  color: #f9a8d4;
+  color: #00f5ff;
   font-size: 0.75rem;
   margin-top: 0.65rem;
 }
@@ -757,7 +757,7 @@ nav a:hover {
 }
 
 .ugc-feature-card h3 {
-  color: #f9a8d4;
+  color: #00f5ff;
 }
 
 .ugc-feature-card p {
@@ -827,7 +827,7 @@ nav a:hover {
 
 .module-card h3,
 .doc-card h2 {
-  color: #f9a8d4;
+  color: #00f5ff;
 }
 
 .case-hero-split {
@@ -842,7 +842,7 @@ nav a:hover {
 }
 
 .case-note {
-  color: #f9a8d4;
+  color: #00f5ff;
   font-size: 0.85rem;
   line-height: 1.7;
 }
@@ -872,7 +872,7 @@ nav a:hover {
 }
 
 .info-card dt {
-  color: #f9a8d4;
+  color: #00f5ff;
   font-size: 0.75rem;
 }
 
@@ -893,7 +893,7 @@ nav a:hover {
 
 .role-map strong,
 .excerpt-card span {
-  color: #f9a8d4;
+  color: #00f5ff;
 }
 
 .role-map span,
@@ -926,7 +926,7 @@ nav a:hover {
 }
 
 .case-table th {
-  color: #f9a8d4;
+  color: #00f5ff;
 }
 
 .excerpt-card {
