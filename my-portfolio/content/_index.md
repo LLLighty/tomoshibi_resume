@@ -65,8 +65,8 @@ summary = "为 VR 电竞项目设计 Player、GM、Spectator 三端的权限边�
 href = "/write/three-client-architecture/"
 
 [[featuredProjects]]
-title = "镜头与转播工具"
-tags = "商业项目 / 工具设计 / 电竞"
-summary = "设计用于赛事呈现的镜头控制与转播辅助功能，包括预设路径、自由镜头和特殊演出镜头。"
-href = "#"
+title = "角色设计：巽 · 泽菲尔（风）"
+tags = "商业项目 / Character Design / Gameplay Design"
+summary = "从角色定位、战斗循环、技能机制到配表、UI、美术需求与 VR 动作识别，完整设计控制型角色‘巽 · 泽菲尔’的战斗体验。"
+href = "/write/zephyr-character-design/"
 +++

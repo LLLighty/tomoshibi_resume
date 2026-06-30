@@ -1,0 +1,170 @@
+{{ define "main" }}
+{{ $video := .Params.video | replaceRE "^/" "" | relURL }}
+{{ $pdf := .Params.pdf | replaceRE "^/" "" | relURL }}
+
+<article class="case-study">
+  <header class="case-hero case-hero-split">
+    <div>
+      <p class="eyebrow">{{ .Params.subtitle }}</p>
+      <h1>{{ .Title }}</h1>
+      <p class="case-lead">以“风”为核心意象的控制型角色，通过节奏压制、持续削弱、技能衔接与大招收割形成完整战斗体验。</p>
+      <div class="button-row">
+        <a class="pixel-button" href="{{ $pdf }}" target="_blank" rel="noopener noreferrer">查看文档摘录</a>
+        <a class="pixel-button" href="{{ $pdf }}" download>下载 PDF</a>
+      </div>
+    </div>
+    <section class="portfolio-card media-card">
+      <video controls preload="metadata" playsinline>
+        <source src="{{ $video }}" type="video/mp4">
+        <a href="{{ $video }}">查看大招演示视频</a>
+      </video>
+    </section>
+  </header>
+
+  <section class="case-grid">
+    <div class="portfolio-card">
+      <h2>项目概览</h2>
+      <p>巽 · 泽菲尔（风）是围绕“风压、削弱、连携”设计的控制型角色。</p>
+      <p>角色不追求单次爆发，而是通过被动叠层、控制技能、能量连接和终极技能，把压制节奏逐步推向收割窗口。</p>
+    </div>
+    <div class="portfolio-card">
+      <h2>我的职责</h2>
+      <ul>
+        <li>角色定位与战斗循环设计</li>
+        <li>技能机制、数值与配表设计</li>
+        <li>UI / 美术 / 音效需求拆解</li>
+        <li>VR 动作识别规则设计</li>
+        <li>系统文档输出与跨岗位沟通</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="portfolio-card">
+    <h2>设计目标</h2>
+    <div class="compact-grid">
+      <p>避免角色成为单纯爆发输出。</p>
+      <p>让被动叠层、控制技能、Buff 连接与大招形成闭环。</p>
+      <p>让玩法机制能被配表、表现需求和 VR 输入规则落地。</p>
+    </div>
+  </section>
+
+  <section class="portfolio-card">
+    <h2>战斗循环</h2>
+    <div class="flow-row zephyr-flow">
+      <span>普攻 / 精准防御叠层</span>
+      <span>Buff 连接压制</span>
+      <span>小技能控制</span>
+      <span>被动满层</span>
+      <span>大招收割</span>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="case-section-title">技能拆解</h2>
+    <div class="module-grid">
+      <div class="portfolio-card module-card">
+        <p class="eyebrow">被动</p>
+        <h3>风之烙印</h3>
+        <p><strong>技能定位：</strong>持续削弱与收割前置。</p>
+        <p><strong>玩法价值：</strong>鼓励玩家通过攻防节奏积累优势。</p>
+        <p><strong>触发条件：</strong>普攻、精准防御或技能命中后叠层。</p>
+        <p><strong>反馈表现：</strong>目标身上出现风痕、层数提示与音效反馈。</p>
+      </div>
+      <div class="portfolio-card module-card">
+        <p class="eyebrow">Buff</p>
+        <h3>流岚缠击</h3>
+        <p><strong>技能定位：</strong>强化连击与压制节奏。</p>
+        <p><strong>玩法价值：</strong>把普通攻击与控制技能连接成持续输出窗口。</p>
+        <p><strong>触发条件：</strong>主动开启或达成特定连携条件。</p>
+        <p><strong>反馈表现：</strong>角色风场特效、UI 状态标识、命中音色变化。</p>
+      </div>
+      <div class="portfolio-card module-card">
+        <p class="eyebrow">小技能</p>
+        <h3>风压控制</h3>
+        <p><strong>技能定位：</strong>限制敌方行动并创造输出节奏。</p>
+        <p><strong>玩法价值：</strong>为被动叠层和大招命中创造稳定窗口。</p>
+        <p><strong>触发条件：</strong>动作识别成立后释放。</p>
+        <p><strong>反馈表现：</strong>风刃轨迹、受击停顿、控制状态提示。</p>
+      </div>
+      <div class="portfolio-card module-card">
+        <p class="eyebrow">终极技能</p>
+        <h3>风暴收割</h3>
+        <p><strong>技能定位：</strong>在满层或压制窗口中完成高价值收割。</p>
+        <p><strong>玩法价值：</strong>让前期叠层与控制行为获得明确回报。</p>
+        <p><strong>触发条件：</strong>能量满足，动作识别与目标状态校验通过。</p>
+        <p><strong>反馈表现：</strong>大范围风暴特效、镜头强调、震动与结算反馈。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio-card">
+    <h2>配表设计</h2>
+    <p class="case-note">只展示代表性字段，重点体现技能参数配置化、可调试、便于程序落地。</p>
+    <div class="table-wrap">
+      <table class="case-table">
+        <thead>
+          <tr>
+            <th>SkillID</th>
+            <th>SkillName</th>
+            <th>VariableName</th>
+            <th>Description</th>
+            <th>Value</th>
+            <th>Unit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>XUN_PASSIVE_01</td><td>风之烙印</td><td>MarkMaxStack</td><td>被动最大叠层</td><td>5</td><td>层</td></tr>
+          <tr><td>XUN_BUFF_01</td><td>流岚缠击</td><td>BuffDuration</td><td>Buff 持续时间</td><td>8</td><td>秒</td></tr>
+          <tr><td>XUN_SKILL_01</td><td>风压控制</td><td>ControlTime</td><td>控制生效时间</td><td>1.2</td><td>秒</td></tr>
+          <tr><td>XUN_ULT_01</td><td>风暴收割</td><td>BonusPerStack</td><td>每层烙印追加收益</td><td>12</td><td>%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="case-section-title">表现需求</h2>
+    <div class="module-grid">
+      <div class="portfolio-card module-card"><h3>UI</h3><p>显示被动层数、Buff 状态、能量与终极技能可释放状态。</p></div>
+      <div class="portfolio-card module-card"><h3>角色特效</h3><p>用风痕、风场和收束效果区分叠层、控制与收割阶段。</p></div>
+      <div class="portfolio-card module-card"><h3>音效</h3><p>为叠层、控制命中、Buff 开启和大招命中设计差异化反馈。</p></div>
+      <div class="portfolio-card module-card"><h3>手柄震动</h3><p>用轻震、连续震动和爆发震动强化动作成立与终结感。</p></div>
+      <div class="portfolio-card module-card"><h3>三端显示</h3><p>玩家端、GM 端与转播端保持关键状态一致，便于赛事观看与判定。</p></div>
+      <div class="portfolio-card module-card"><h3>落地沟通</h3><p>把玩法机制拆成可执行的程序、美术、UI 与音效需求。</p></div>
+    </div>
+  </section>
+
+  <section class="portfolio-card">
+    <h2>VR 动作识别</h2>
+    <div class="flow-row">
+      <span>动作开始</span>
+      <span>右手轨迹检测</span>
+      <span>左手姿态检测</span>
+      <span>时间窗口校验</span>
+      <span>动作成立</span>
+      <span>技能释放</span>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="case-section-title">文档摘录</h2>
+    <p class="case-note">不直接嵌入完整 PDF，只保留代表性缩略内容与下载入口。</p>
+    <div class="excerpt-grid">
+      <div class="portfolio-card excerpt-card"><span>战斗循环图</span><div class="mini-flow">叠层 → 压制 → 控制 → 收割</div></div>
+      <div class="portfolio-card excerpt-card"><span>被动叠层流程</span><div class="mini-flow">命中 / 防御 → Mark → 满层</div></div>
+      <div class="portfolio-card excerpt-card"><span>配表示例</span><div class="mini-table">SkillID / Variable / Value</div></div>
+      <div class="portfolio-card excerpt-card"><span>动作识别流程</span><div class="mini-flow">轨迹 → 姿态 → 时间窗</div></div>
+    </div>
+    <div class="button-row case-actions doc-actions">
+      <a class="pixel-button" href="{{ $pdf }}" target="_blank" rel="noopener noreferrer">查看文档摘录</a>
+      <a class="pixel-button" href="{{ $pdf }}" download>下载 PDF</a>
+    </div>
+  </section>
+
+  <section class="portfolio-card">
+    <h2>设计复盘</h2>
+    <p>这个案例的价值在于把角色幻想、玩法循环、数值配置、表现需求和 VR 输入规则整合成一套可落地的角色设计方案。</p>
+    <p>角色设计不只停留在技能描述，而是继续拆到程序可读的配置、玩家可感知的反馈和跨端一致的展示规则。</p>
+  </section>
+</article>
+{{ end }}
