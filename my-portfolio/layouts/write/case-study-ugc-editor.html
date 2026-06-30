@@ -1,0 +1,160 @@
+{{ define "main" }}
+{{ $banner := "images/ugc-editor/figma-editor-banner.png" | relURL }}
+{{ $imgLibrary := "images/ugc-editor/song-library.png" | relURL }}
+{{ $imgImport := "images/ugc-editor/song-import.png" | relURL }}
+{{ $img3d := "images/ugc-editor/three-d-editor.png" | relURL }}
+{{ $imgTarget := "images/ugc-editor/target-view.png" | relURL }}
+{{ $imgDifficulty := "images/ugc-editor/difficulty-flow.png" | relURL }}
+{{ $imgSettings := "images/ugc-editor/settings-panel.png" | relURL }}
+{{ $imgExport := "images/ugc-editor/export-panel.png" | relURL }}
+
+<article class="case-study ugc-case">
+  <header class="case-hero case-hero-split ugc-hero">
+    <figure class="portfolio-card ugc-banner-card">
+      <img src="{{ $banner }}" alt="UGC 谱面编辑器 Figma 线框图">
+    </figure>
+    <div class="portfolio-card">
+      <p class="eyebrow">{{ .Params.subtitle }}</p>
+      <h1>{{ .Title }}</h1>
+      <p class="case-lead">为 VR 节奏跆拳道项目设计的 UGC 谱面编辑器，覆盖谱库管理、音乐导入、BPM 分析、2D/3D 编辑、实时试玩和谱面导出等完整流程。</p>
+      <div class="archive-tags">
+        <span>谱库管理</span>
+        <span>BPM 分析</span>
+        <span>Timeline</span>
+        <span>2D / 3D 编辑</span>
+        <span>实时试玩</span>
+        <span>配置表</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="case-grid">
+    <div class="portfolio-card">
+      <h2>项目背景</h2>
+      <p>节奏跆拳道需要稳定的谱面生产工具，让策划和玩家能把音乐节拍转化为可试玩、可验证、可导出的 Note / Block 数据。</p>
+      <p>设计目标不是做一个普通列表工具，而是把音乐分析、谱面编辑、场景预览、试玩校验和导出流程合成一条低门槛工作流。</p>
+    </div>
+    <div class="portfolio-card">
+      <h2>负责内容</h2>
+      <ul>
+        <li>编辑器整体流程设计</li>
+        <li>UI 线框与页面状态设计</li>
+        <li>Song / Difficulty / Timeline / Note 数据结构规划</li>
+        <li>基础配置与难度系数配表设计</li>
+        <li>和程序、美术沟通编辑器交互与落地边界</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="portfolio-card">
+    <h2>核心工作流</h2>
+    <div class="flow-row ugc-workflow">
+      <span>导入歌曲</span>
+      <span>自动分析 BPM</span>
+      <span>创建曲目</span>
+      <span>创建难度</span>
+      <span>2D / 3D 编辑</span>
+      <span>实时试玩</span>
+      <span>导出谱面</span>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="case-section-title">设计亮点</h2>
+    <div class="ugc-feature-grid">
+      <article class="portfolio-card ugc-feature-card">
+        <img src="{{ $imgImport }}" alt="音乐导入与 BPM 分析线框图">
+        <div>
+          <h3>音乐分析</h3>
+          <p>导入歌曲后自动识别 BPM，并生成节拍网格，减少手动对拍成本。</p>
+          <p>编辑器先建立音乐结构，再进入谱面编辑，保证后续 Note 放置有稳定时间基准。</p>
+        </div>
+      </article>
+      <article class="portfolio-card ugc-feature-card">
+        <img src="{{ $img3d }}" alt="3D 编辑视图线框图">
+        <div>
+          <h3>二维 / 三维同步编辑</h3>
+          <p>2D 时间轴负责精确定位，3D 视图负责空间关系和玩家动作可读性。</p>
+          <p>双视图同步能让编辑者同时检查节奏、轨迹、距离和身体部位目标。</p>
+        </div>
+      </article>
+      <article class="portfolio-card ugc-feature-card">
+        <img src="{{ $imgLibrary }}" alt="谱库管理线框图">
+        <div>
+          <h3>时间轴编辑</h3>
+          <p>通过曲目列表和时间轴入口管理谱面版本，降低多首歌、多难度切换成本。</p>
+          <p>波形预览与节拍定位服务编辑效率，让谱面修改不依赖反复进出关卡。</p>
+        </div>
+      </article>
+      <article class="portfolio-card ugc-feature-card">
+        <img src="{{ $imgTarget }}" alt="目标点与网格编辑线框图">
+        <div>
+          <h3>网格吸附</h3>
+          <p>目标位置基于节拍和空间网格吸附，减少拖拽误差。</p>
+          <p>它让 UGC 编辑更接近“配置节奏与动作目标”，而不是反复微调坐标。</p>
+        </div>
+      </article>
+      <article class="portfolio-card ugc-feature-card">
+        <img src="{{ $imgSettings }}" alt="实时试玩设置线框图">
+        <div>
+          <h3>实时试玩验证</h3>
+          <p>编辑过程中提供试玩入口，快速验证 Note 密度、动作可行性和节奏压力。</p>
+          <p>试玩结果反向指导编辑，形成“编辑 → 验证 → 修正”的短循环。</p>
+        </div>
+      </article>
+      <article class="portfolio-card ugc-feature-card">
+        <img src="{{ $imgDifficulty }}" alt="难度创建线框图">
+        <div>
+          <h3>配置表设计</h3>
+          <p>把基础配置和难度系数拆开，让同一首歌可以生成不同难度版本。</p>
+          <p>参数计算遵循“基础配置 × 难度系数”，便于平衡节奏密度、速度和容错。</p>
+        </div>
+      </article>
+      <article class="portfolio-card ugc-feature-card">
+        <img src="{{ $imgExport }}" alt="谱面导出线框图">
+        <div>
+          <h3>数据结构设计</h3>
+          <p>谱面数据按 Song → Difficulty → Timeline → Note 分层，清晰区分曲目信息、难度版本、时间轴和具体目标。</p>
+          <p>这种结构利于导入导出、版本管理和后续异步 PVP / UGC 内容扩展。</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="portfolio-card">
+    <h2>数据结构与配置思路</h2>
+    <div class="flow-row compact-flow">
+      <span>Song<br>曲名 / 音频 / BPM</span>
+      <span>Difficulty<br>难度 / 系数 / 版本</span>
+      <span>Timeline<br>节拍 / 时间点 / 轨道</span>
+      <span>Note<br>类型 / 位置 / 身体部位</span>
+    </div>
+    <div class="table-wrap ugc-config-table">
+      <table class="case-table">
+        <thead>
+          <tr>
+            <th>Config</th>
+            <th>Base</th>
+            <th>Difficulty Factor</th>
+            <th>Runtime Meaning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>NoteSpeed</td><td>1.0</td><td>Green 0.8 / Black 1.3</td><td>控制 Note 接近速度与反应窗口。</td></tr>
+          <tr><td>BeatSnap</td><td>1/4</td><td>1/8 / 1/16</td><td>控制可吸附节拍精度。</td></tr>
+          <tr><td>DensityLimit</td><td>8</td><td>+20% / +40%</td><td>限制单位时间内目标密度，避免不可玩。</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="portfolio-card">
+    <h2>项目成果</h2>
+    <div class="compact-grid">
+      <p>输出完整编辑器方案，覆盖谱库、导入、编辑、试玩和导出流程。</p>
+      <p>产出 Figma 线框与页面状态，帮助团队对齐编辑器交互。</p>
+      <p>整理配置规则、数据结构和多页设计文档，支撑后续程序开发。</p>
+    </div>
+  </section>
+</article>
+{{ end }}

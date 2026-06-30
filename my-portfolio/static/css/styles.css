@@ -968,6 +968,53 @@ nav a:hover {
   background: #000000;
   border-radius: 0.35rem;
 }
+.ugc-case .archive-tags {
+  margin-top: 1rem;
+}
+.ugc-banner-card {
+  margin: 0;
+  padding: 0.75rem;
+}
+.ugc-banner-card img, .ugc-feature-card img {
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 0.35rem;
+  display: block;
+  height: auto;
+  width: 100%;
+}
+.ugc-feature-grid {
+  display: grid;
+  gap: 1rem;
+}
+.ugc-feature-card {
+  display: grid;
+  gap: 1rem;
+  padding: 0.9rem;
+}
+.ugc-feature-card img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.ugc-feature-card h3 {
+  color: #f9a8d4;
+}
+.ugc-feature-card p {
+  color: #e5e7eb;
+  line-height: 1.7;
+}
+.ugc-workflow span {
+  min-height: 72px;
+}
+.ugc-config-table {
+  margin-top: 1rem;
+}
+.ugc-config-table .case-table {
+  min-width: 0;
+}
+.ugc-config-table .case-table th, .ugc-config-table .case-table td {
+  overflow-wrap: anywhere;
+}
 .case-actions {
   margin-top: -0.5rem;
 }
@@ -1142,6 +1189,17 @@ nav a:hover {
   .case-hero-split {
     grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
     align-items: start;
+  }
+  .ugc-hero {
+    grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  }
+  .ugc-feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .ugc-feature-card:last-child {
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+    align-items: center;
   }
   .role-map {
     grid-template-columns: repeat(3, minmax(0, 1fr));

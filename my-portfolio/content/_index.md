@@ -56,7 +56,7 @@ href = "/write/vspo-tfg/"
 title = "UGC 谱面编辑器"
 tags = "商业项目 / UGC / 工具设计"
 summary = "设计用户生成音乐谱面编辑器，覆盖时间轴编辑、音符放置、试玩验证与数据结构规划。"
-href = "#"
+href = "/write/ugc-chart-editor/"
 
 [[featuredProjects]]
 title = "三端系统架构"
