@@ -42,9 +42,9 @@ label = "游戏经历"
 value = "2500+ 小时"
 
 [[featuredProjects]]
-title = "VSPO 代号TFG"
+title = "VTKD & 代号TFG"
 tags = "商业项目 / VR / Gameplay"
-summary = "与世界跆拳道协会与Refract合作，制作的Virtual Taekwondo续作：代号TFG。我负责设计核心节奏战斗循环，包括音符交互、评分、连击、血量与玩家反馈。"
+summary = "与世界跆拳道协会与Refract合作的VR格斗游戏项目。负责设计局外音游玩法的核心循环，包括音符交互、评分、连击、血量与玩家反馈。"
 href = "#"
 
 [[featuredProjects]]
