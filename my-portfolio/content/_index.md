@@ -1,9 +1,9 @@
 +++
 portraitImage = "/portrait.png"
 
-heroTitle = "小灯 / Carol Tong"
+heroTitle = "小灯（佟天琪）"
 heroSubtitle = "System Designer / Gameplay Designer"
-heroTags = "VR · PC · UGC · Gameplay · System Design"
+heroTags = "VR&PC端 · Unity · UE5 · Godot"
 heroBody = "一年商业游戏开发经验，参与 VR/PC 双端格斗与节奏玩法项目，负责系统架构、玩法系统、UGC 编辑器与多端交互流程设计。习惯从玩家体验出发拆解系统，并把设计落到可执行的结构中。"
 
 playerBackground = "2500+ 小时跨平台游戏经历，覆盖魂系、开放世界、动作 RPG、JRPG、CRPG、独立游戏与二次元手游。长期关注系统拆解、战斗机制、关卡结构与叙事体验。"

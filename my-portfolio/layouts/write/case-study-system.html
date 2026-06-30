@@ -8,7 +8,9 @@
       <p class="eyebrow">{{ .Params.subtitle }}</p>
       <h1>{{ .Title }}</h1>
       <p class="case-lead">为 VR 电竞场景搭建可扩展的基础系统框架，让玩家端、裁判端与转播端在统一规则下协作。</p>
-      <p class="case-note">系统策划 Case Study：重点展示权限边界、状态流转、配置结构与异常处理方案。</p>
+      <figure class="hero-wireframe-card">
+        <img src="{{ "images/tfg-system/figma-wireframes.png" | relURL }}" alt="使用 Figma 进行线框图设计">
+      </figure>
     </div>
     <aside class="portfolio-card info-card">
       <h2>项目信息</h2>
@@ -170,7 +172,7 @@
       <div class="portfolio-card excerpt-card"><span>设置系统分层图</span><div class="mini-flow">Config → Control → Runtime</div></div>
       <div class="portfolio-card excerpt-card"><span>控件配表示例</span><div class="mini-table">Key / Type / Default</div></div>
     </div>
-    <div class="button-row case-actions">
+    <div class="button-row case-actions doc-actions">
       <a class="pixel-button" href="{{ $loginPdf }}" target="_blank" rel="noopener noreferrer">查看登录文档摘录</a>
       <a class="pixel-button" href="{{ $settingsPdf }}" target="_blank" rel="noopener noreferrer">查看设置文档摘录</a>
       <a class="pixel-button" href="{{ $loginPdf }}" download>下载登录 PDF</a>

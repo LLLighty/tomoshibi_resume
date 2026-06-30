@@ -3,7 +3,7 @@
 
 <section class="home-hero">
 	<div class="portfolio-card hero-profile">
-		<img src="{{ (or $p.portraitImage "/portrait.png") | replaceRE "^/" "" | relURL }}" alt="小灯 / Carol Tong" class="hero-portrait">
+		<img src="{{ (or $p.portraitImage "/portrait.png") | replaceRE "^/" "" | relURL }}" alt="{{ or $p.heroTitle "小灯（佟天琪）" }}" class="hero-portrait">
 		<div class="hero-copy">
 			<h1>{{ or $p.heroTitle "小灯 / Carol Tong" }}</h1>
 			<p class="hero-subtitle">{{ or $p.heroSubtitle "System Designer / Gameplay Designer" }}</p>

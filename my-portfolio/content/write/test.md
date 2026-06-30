@@ -9,15 +9,7 @@ teaser = "从战斗、防御、武器组装、军团义手、资源循环、叙�
 
 ## 系统拆解
 
-![核心玩法系统拆解](/images/lies-of-p/core-gameplay.png)
-
-![角色系统拆解](/images/lies-of-p/character-system.png)
-
-![道具系统拆解](/images/lies-of-p/item-system.png)
-
-![敌人系统拆解](/images/lies-of-p/enemy-system.png)
-
-![世界观与叙事系统拆解](/images/lies-of-p/world-narrative.png)
+{{< lies-system-breakdown >}}
 
 ## 设计分析
 
