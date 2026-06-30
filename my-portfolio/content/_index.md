@@ -46,9 +46,9 @@ label = "当前关注"
 value = "Gameplay System & Level Design"
 
 [[featuredProjects]]
-title = "英雄电竞 VR 节奏玩法"
+title = "VSPO 代号TFG"
 tags = "商业项目 / VR / Gameplay"
-summary = "为 VR 跆拳道项目设计核心节奏战斗循环，包括音符交互、评分、连击、血量与玩家反馈。"
+summary = "与世界跆拳道协会与Refract合作，制作的Virtual Taekwondo续作：代号TFG。我负责设计核心节奏战斗循环，包括音符交互、评分、连击、血量与玩家反馈。"
 href = "#"
 
 [[featuredProjects]]
