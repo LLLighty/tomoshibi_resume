@@ -1,24 +1,19 @@
 {{ define "main" }}
 {{ $video := .Params.video | replaceRE "^/" "" | relURL }}
-{{ $pdf := .Params.pdf | replaceRE "^/" "" | relURL }}
 
 <article class="case-study">
-  <header class="case-hero case-hero-split">
+  <header class="case-hero">
     <div>
       <p class="eyebrow">{{ .Params.subtitle }}</p>
       <h1>{{ .Title }}</h1>
       <p class="case-lead">以“风”为核心意象的控制型角色，通过节奏压制、持续削弱、技能衔接与大招收割形成完整战斗体验。</p>
-      <div class="button-row">
-        <a class="pixel-button" href="{{ $pdf }}" target="_blank" rel="noopener noreferrer">查看文档摘录</a>
-        <a class="pixel-button" href="{{ $pdf }}" download>下载 PDF</a>
-      </div>
+      <section class="portfolio-card media-card hero-media-card">
+        <video controls preload="metadata" playsinline>
+          <source src="{{ $video }}" type="video/mp4">
+          <a href="{{ $video }}">查看大招演示视频</a>
+        </video>
+      </section>
     </div>
-    <section class="portfolio-card media-card">
-      <video controls preload="metadata" playsinline>
-        <source src="{{ $video }}" type="video/mp4">
-        <a href="{{ $video }}">查看大招演示视频</a>
-      </video>
-    </section>
   </header>
 
   <section class="case-grid">
@@ -148,16 +143,11 @@
 
   <section>
     <h2 class="case-section-title">文档摘录</h2>
-    <p class="case-note">不直接嵌入完整 PDF，只保留代表性缩略内容与下载入口。</p>
     <div class="excerpt-grid">
       <div class="portfolio-card excerpt-card"><span>战斗循环图</span><div class="mini-flow">叠层 → 压制 → 控制 → 收割</div></div>
       <div class="portfolio-card excerpt-card"><span>被动叠层流程</span><div class="mini-flow">命中 / 防御 → Mark → 满层</div></div>
       <div class="portfolio-card excerpt-card"><span>配表示例</span><div class="mini-table">SkillID / Variable / Value</div></div>
       <div class="portfolio-card excerpt-card"><span>动作识别流程</span><div class="mini-flow">轨迹 → 姿态 → 时间窗</div></div>
-    </div>
-    <div class="button-row case-actions doc-actions">
-      <a class="pixel-button" href="{{ $pdf }}" target="_blank" rel="noopener noreferrer">查看文档摘录</a>
-      <a class="pixel-button" href="{{ $pdf }}" download>下载 PDF</a>
     </div>
   </section>
 

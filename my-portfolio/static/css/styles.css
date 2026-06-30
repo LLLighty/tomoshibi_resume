@@ -8,7 +8,6 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-cyan-300: oklch(86.5% 0.127 207.078);
-    --color-pink-300: oklch(82.3% 0.12 346.018);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-white: #fff;
@@ -230,9 +229,6 @@
   }
   .grid {
     display: grid;
-  }
-  .hidden {
-    display: none;
   }
   .h-\[54px\] {
     height: 54px;
@@ -968,6 +964,9 @@ nav a:hover {
   aspect-ratio: 16 / 9;
   background: #000000;
   border-radius: 0.35rem;
+}
+.hero-media-card {
+  margin-top: 1rem;
 }
 .ugc-case .archive-tags {
   margin-top: 1rem;

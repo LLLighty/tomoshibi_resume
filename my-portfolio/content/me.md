@@ -3,7 +3,6 @@ title = "me"
 layout = "me"
 likes = [
   "111",
-  "Example 2",
   "Example 3",
   "Example 4",
   "Example 5",
@@ -16,7 +15,6 @@ likes = [
 
 dislikes = [
   "Example 1",
-  "Example 2",
   "Example 3",
   "Example 4",
   "Example 5",
@@ -25,7 +23,6 @@ dislikes = [
 
 hobbies = [
   "Example 1",
-  "Example 2",
   "Example 3",
   "Example 4",
   "Example 5",

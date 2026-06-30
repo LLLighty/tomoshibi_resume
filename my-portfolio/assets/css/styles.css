@@ -721,6 +721,10 @@ nav a:hover {
   border-radius: 0.35rem;
 }
 
+.hero-media-card {
+  margin-top: 1rem;
+}
+
 .ugc-case .archive-tags {
   margin-top: 1rem;
 }

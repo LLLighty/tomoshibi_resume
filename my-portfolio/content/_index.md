@@ -6,7 +6,7 @@ heroSubtitle = "System Designer / Gameplay Designer"
 heroTags = "VR&PC端 · Unity · UE5 · Godot"
 heroBody = "一年商业游戏开发经验，参与 VR/PC 双端格斗与节奏玩法项目，负责系统架构、玩法系统、UGC 编辑器与多端交互流程设计。习惯从玩家体验出发拆解系统，并把设计落到可执行的结构中。"
 
-playerBackground = "2500+ 小时跨平台游戏经历，覆盖魂系、开放世界、动作 RPG、JRPG、CRPG、独立游戏与二次元手游。长期关注系统拆解、战斗机制、关卡结构与叙事体验。"
+playerBackground = "3000+ 小时主机与PC&手游经历，覆盖魂系、开放世界、动作 RPG、JRPG、CRPG、独立游戏与二次元手游。长期关注系统拆解、战斗机制、关卡结构与叙事体验。"
 
 musicLabel = "正在听"
 musicTitle = "Aerith's Theme"
@@ -27,6 +27,10 @@ label = "联系方式"
 href = "#contact"
 
 [[snapshot]]
+label = "学历"
+value = "杜伦大学（英国）- 犯罪学"
+
+[[snapshot]]
 label = "商业项目经验"
 value = "1 年"
 
@@ -40,7 +44,7 @@ value = "系统搭建, UGC 编辑器设计, 格斗与音乐游戏规则设计, V
 
 [[snapshot]]
 label = "游戏经历"
-value = "2500+ 小时"
+value = "3000+ 小时主机与PC&手游"
 
 [[snapshot]]
 label = "正在深入"

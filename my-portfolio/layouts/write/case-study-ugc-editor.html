@@ -9,10 +9,7 @@
 {{ $imgExport := "images/ugc-editor/export-panel.png" | relURL }}
 
 <article class="case-study ugc-case">
-  <header class="case-hero case-hero-split ugc-hero">
-    <figure class="portfolio-card ugc-banner-card">
-      <img src="{{ $banner }}" alt="UGC 谱面编辑器 Figma 线框图">
-    </figure>
+  <header class="case-hero ugc-hero">
     <div class="portfolio-card">
       <p class="eyebrow">{{ .Params.subtitle }}</p>
       <h1>{{ .Title }}</h1>
@@ -26,6 +23,9 @@
         <span>配置表</span>
       </div>
     </div>
+    <figure class="portfolio-card ugc-banner-card">
+      <img src="{{ $banner }}" alt="UGC 谱面编辑器 Figma 线框图">
+    </figure>
   </header>
 
   <section class="case-grid">

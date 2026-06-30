@@ -99,7 +99,7 @@
 			</div>
 			<div>
 				<h4>工具 / 能力</h4>
-				<p>System Design, Gameplay Design, UGC Tool Design, VR Interaction, Documentation, Cross-functional Communication, Unity / Unreal Prototype Thinking, Figma, Excel, SQL</p>
+				<p>系统设计, Gameplay设计, UGC工具设计, VR交互, 需求文档撰写, 多岗位协同沟通, Unity 引擎使用, Luban配表及Git使用, Figma, Excel, SQL</p>
 			</div>
 		</div>
 	</article>
@@ -141,7 +141,7 @@
 			</div>
 			<div>
 				<h4>工具 / 能力</h4>
-				<p>Market Research, Competitive Analysis, MySQL, Data Visualization, Report Writing</p>
+				<p>市场研究, 复合方法竞品分析, MySQL, 数据可视化, 报告撰写</p>
 			</div>
 		</div>
 	</article>
@@ -150,31 +150,19 @@
 <section id="game-archive" class="home-section game-archive">
 	<div class="section-heading">
 		<h2>游戏图鉴</h2>
-		<p>Game Archive：把长期游玩经验整理成设计观察，而不是单纯的收藏列表。</p>
 	</div>
 
 	<div class="portfolio-card archive-profile">
 		<div>
 			<p class="eyebrow">Player Profile</p>
 			<h3>从玩家经验进入设计拆解</h3>
-			<p>累计体验 100+ 款游戏，2500+ 小时跨平台游玩经历，覆盖 Steam、PlayStation、Nintendo Switch、3DS、Mobile 等平台。主要关注 System Design、Gameplay、Level Design 与 Narrative。</p>
+			<p>累计体验 600+ 款游戏，3000+小时跨平台游玩经历，覆盖 Steam、PS、NS、3DS、移动 等平台。主要关注 System Design、Gameplay、Level Design 与 Narrative。</p>
 		</div>
 		<div class="archive-stats">
-			<div><span>100+</span><small>体验作品</small></div>
-			<div><span>2500+</span><small>游戏时长</small></div>
+			<div><span>600+</span><small>体验作品</small></div>
+			<div><span>3000+</span><small>游戏时长</small></div>
 			<div><span>5+</span><small>覆盖平台</small></div>
 			<div><span>4</span><small>研究方向</small></div>
-		</div>
-		<div class="archive-tags">
-			<span>Steam</span>
-			<span>PlayStation</span>
-			<span>Nintendo Switch</span>
-			<span>3DS</span>
-			<span>Mobile</span>
-			<span>System Design</span>
-			<span>Gameplay</span>
-			<span>Level Design</span>
-			<span>Narrative</span>
 		</div>
 		<a class="pixel-button archive-steam-link" href="https://steamcommunity.com/id/DONUTTANSY/" target="_blank" rel="noopener noreferrer">查看 Steam 主页</a>
 	</div>
@@ -209,169 +197,7 @@
 		</div>
 	</div>
 
-	{{ $archiveCategories := slice
-		(dict "name" "Soulborne" "focus" "地图捷径、Boss 教学、风险奖励、资源压力与死亡惩罚。" "games" (slice "黑暗之魂" "黑暗之魂 III" "Bloodborne" "Elden Ring" "Sekiro" "Lies of P"))
-		(dict "name" "JRPG" "focus" "成长系统、流程节奏、队伍构筑、情绪奖励与角色陪伴。" "games" (slice "最终幻想 VII" "最终幻想 XIV" "女神异闻录 5" "勇者斗恶龙 XI" "异度神剑"))
-		(dict "name" "CRPG" "focus" "文本叙事、玩家选择、技能检定、任务分支与角色扮演边界。" "games" (slice "极乐迪斯科" "博德之门 3" "神界：原罪 2" "Pillars of Eternity"))
-		(dict "name" "Rhythm" "focus" "Timing 窗口、输入反馈、谱面层次、失误惩罚与玩家心流。" "games" (slice "Project SEKAI" "Muse Dash" "Rhythm Doctor" "太鼓达人" "节奏天国"))
-		(dict "name" "Visual Novel" "focus" "信息节奏、角色视角、分支结构、情绪铺垫与文本 UI。" "games" (slice "海猫鸣泣之时" "命运石之门" "428：被封锁的涩谷" "VA-11 Hall-A"))
-		(dict "name" "Simulation" "focus" "经济循环、长期目标、资源转化、自动化效率与玩家规划。" "games" (slice "星露谷物语" "动物森友会" "都市：天际线" "RimWorld" "戴森球计划"))
-		(dict "name" "Horror" "focus" "情绪塑造、资源管理、视听压迫、信息遮蔽与安全区节奏。" "games" (slice "生化危机 2 重制版" "寂静岭 2" "SIGNALIS" "小小梦魇" "心灵杀手 2"))
-		(dict "name" "Co-op" "focus" "协作目标、角色分工、沟通成本、失败恢复与共同高光。" "games" (slice "双人成行" "胡闹厨房" "怪物猎人" "Helldivers 2" "Deep Rock Galactic"))
-		(dict "name" "Open World" "focus" "探索动机、地形引导、系统组合、开放目标与玩家路线规划。" "games" (slice "塞尔达传说：旷野之息" "死亡搁浅" "荒野大镖客 2" "赛博朋克 2077" "巫师 3"))
-	}}
-	<div class="archive-block">
-		<div class="section-heading archive-subheading">
-			<h3>按类型整理的设计观察</h3>
-			<p>每个分类关注不同设计问题，用来积累可迁移的策划方法。</p>
-		</div>
-		<div class="genre-accordion">
-			{{ range $archiveCategories }}
-				<details class="portfolio-card genre-card">
-					<summary>
-						<span>{{ .name }}</span>
-						<small>{{ len .games }} titles</small>
-					</summary>
-					<div class="game-chip-list">
-						{{ range .games }}<span>{{ . }}</span>{{ end }}
-					</div>
-					<p><strong>研究重点：</strong>{{ .focus }}</p>
-				</details>
-			{{ end }}
-		</div>
-	</div>
-
-	{{ $gameDatabase := slice
-		(dict "title" "死亡搁浅" "genre" "Open World" "platform" "Steam / PlayStation" "hours" "100+")
-		(dict "title" "黑暗之魂" "genre" "Soulborne" "platform" "Steam / PlayStation" "hours" "100+")
-		(dict "title" "Elden Ring" "genre" "Soulborne" "platform" "Steam / PlayStation" "hours" "100+")
-		(dict "title" "Lies of P" "genre" "Soulborne" "platform" "Steam" "hours" "50-100")
-		(dict "title" "Sekiro" "genre" "Soulborne" "platform" "Steam / PlayStation" "hours" "50-100")
-		(dict "title" "极乐迪斯科" "genre" "CRPG" "platform" "Steam" "hours" "50-100")
-		(dict "title" "博德之门 3" "genre" "CRPG" "platform" "Steam" "hours" "100+")
-		(dict "title" "神界：原罪 2" "genre" "CRPG" "platform" "Steam" "hours" "50-100")
-		(dict "title" "最终幻想 VII" "genre" "JRPG" "platform" "Steam / PlayStation" "hours" "50-100")
-		(dict "title" "最终幻想 XIV" "genre" "JRPG" "platform" "PC" "hours" "100+")
-		(dict "title" "女神异闻录 5" "genre" "JRPG" "platform" "PlayStation / Switch" "hours" "100+")
-		(dict "title" "异度神剑" "genre" "JRPG" "platform" "Nintendo Switch" "hours" "50-100")
-		(dict "title" "塞尔达传说：旷野之息" "genre" "Open World" "platform" "Nintendo Switch" "hours" "100+")
-		(dict "title" "塞尔达传说：王国之泪" "genre" "Open World" "platform" "Nintendo Switch" "hours" "100+")
-		(dict "title" "赛博朋克 2077" "genre" "Open World" "platform" "Steam" "hours" "50-100")
-		(dict "title" "巫师 3" "genre" "Open World" "platform" "Steam / Switch" "hours" "100+")
-		(dict "title" "Project SEKAI" "genre" "Rhythm" "platform" "Mobile" "hours" "100+")
-		(dict "title" "Muse Dash" "genre" "Rhythm" "platform" "Steam / Mobile" "hours" "20-50")
-		(dict "title" "Rhythm Doctor" "genre" "Rhythm" "platform" "Steam" "hours" "10-20")
-		(dict "title" "太鼓达人" "genre" "Rhythm" "platform" "Switch" "hours" "20-50")
-		(dict "title" "海猫鸣泣之时" "genre" "Visual Novel" "platform" "Steam" "hours" "100+")
-		(dict "title" "命运石之门" "genre" "Visual Novel" "platform" "Steam / PlayStation" "hours" "50-100")
-		(dict "title" "VA-11 Hall-A" "genre" "Visual Novel" "platform" "Steam / Switch" "hours" "10-20")
-		(dict "title" "星露谷物语" "genre" "Simulation" "platform" "Steam / Switch" "hours" "100+")
-		(dict "title" "动物森友会" "genre" "Simulation" "platform" "Nintendo Switch" "hours" "100+")
-		(dict "title" "RimWorld" "genre" "Simulation" "platform" "Steam" "hours" "50-100")
-		(dict "title" "生化危机 2 重制版" "genre" "Horror" "platform" "Steam / PlayStation" "hours" "20-50")
-		(dict "title" "SIGNALIS" "genre" "Horror" "platform" "Steam" "hours" "10-20")
-		(dict "title" "心灵杀手 2" "genre" "Horror" "platform" "PlayStation" "hours" "20-50")
-		(dict "title" "双人成行" "genre" "Co-op" "platform" "Steam / PlayStation" "hours" "10-20")
-		(dict "title" "怪物猎人" "genre" "Co-op" "platform" "Steam / 3DS / Switch" "hours" "100+")
-		(dict "title" "Helldivers 2" "genre" "Co-op" "platform" "Steam / PlayStation" "hours" "20-50")
-		(dict "title" "火焰纹章" "genre" "Strategy" "platform" "3DS / Switch" "hours" "50-100")
-		(dict "title" "明日方舟" "genre" "Strategy" "platform" "Mobile" "hours" "100+")
-		(dict "title" "原神" "genre" "Open World" "platform" "Mobile / PC" "hours" "100+")
-	}}
-	<div class="archive-block">
-		<div class="section-heading archive-subheading">
-			<h3>完整游戏数据库</h3>
-			<p>用于展示游玩广度与研究入口，可按类型、平台和时长快速筛选。</p>
-		</div>
-		<div class="portfolio-card archive-database">
-			<div class="archive-filters">
-				<label>
-					<span>Search</span>
-					<input type="search" id="game-search" placeholder="搜索游戏名称">
-				</label>
-				<label>
-					<span>类型</span>
-					<select id="genre-filter">
-						<option value="">全部</option>
-						<option>Soulborne</option>
-						<option>JRPG</option>
-						<option>CRPG</option>
-						<option>Rhythm</option>
-						<option>Visual Novel</option>
-						<option>Simulation</option>
-						<option>Horror</option>
-						<option>Co-op</option>
-						<option>Open World</option>
-						<option>Strategy</option>
-					</select>
-				</label>
-				<label>
-					<span>平台</span>
-					<select id="platform-filter">
-						<option value="">全部</option>
-						<option>Steam</option>
-						<option>PlayStation</option>
-						<option value="Switch">Nintendo Switch</option>
-						<option>3DS</option>
-						<option>Mobile</option>
-						<option>PC</option>
-					</select>
-				</label>
-				<label>
-					<span>时长</span>
-					<select id="hours-filter">
-						<option value="">全部</option>
-						<option>10-20</option>
-						<option>20-50</option>
-						<option>50-100</option>
-						<option>100+</option>
-					</select>
-				</label>
-			</div>
-			<div class="game-database-grid" id="game-database-grid">
-				{{ range $gameDatabase }}
-					<article class="game-entry" data-title="{{ .title | lower }}" data-genre="{{ .genre }}" data-platform="{{ .platform }}" data-hours="{{ .hours }}">
-						<strong>{{ .title }}</strong>
-						<span>{{ .genre }}</span>
-						<small>{{ .platform }} · {{ .hours }}h</small>
-					</article>
-				{{ end }}
-			</div>
-			<p class="archive-empty" id="archive-empty" hidden>没有找到匹配项目。</p>
-		</div>
-	</div>
 </section>
-
-<script>
-(() => {
-	const root = document.getElementById("game-database-grid");
-	if (!root) return;
-	const search = document.getElementById("game-search");
-	const genre = document.getElementById("genre-filter");
-	const platform = document.getElementById("platform-filter");
-	const hours = document.getElementById("hours-filter");
-	const empty = document.getElementById("archive-empty");
-	const entries = Array.from(root.querySelectorAll(".game-entry"));
-	const filterEntries = () => {
-		const keyword = (search.value || "").trim().toLowerCase();
-		const genreValue = genre.value;
-		const platformValue = platform.value;
-		const hoursValue = hours.value;
-		let visibleCount = 0;
-		entries.forEach((entry) => {
-			const matchesKeyword = !keyword || entry.dataset.title.includes(keyword);
-			const matchesGenre = !genreValue || entry.dataset.genre === genreValue;
-			const matchesPlatform = !platformValue || entry.dataset.platform.includes(platformValue);
-			const matchesHours = !hoursValue || entry.dataset.hours === hoursValue;
-			const visible = matchesKeyword && matchesGenre && matchesPlatform && matchesHours;
-			entry.hidden = !visible;
-			if (visible) visibleCount += 1;
-		});
-		empty.hidden = visibleCount > 0;
-	};
-	[search, genre, platform, hours].forEach((control) => control.addEventListener("input", filterEntries));
-})();
-</script>
 
 <section class="home-section music-section">
 	<div class="portfolio-card music-card">
