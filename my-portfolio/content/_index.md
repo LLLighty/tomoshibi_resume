@@ -14,58 +14,58 @@ musicArtist = "Final Fantasy VII"
 musicFile = "/music/aeriths-theme.mp3"
 
 [[heroButtons]]
-label = "View Projects"
+label = "查看项目"
 href = "#featured-projects"
 
 [[heroButtons]]
-label = "Resume"
+label = "简历"
 href = "/files/tong-tianqi-resume.pdf"
 
 [[heroButtons]]
-label = "Contact"
+label = "联系方式"
 href = "#contact"
 
 [[snapshot]]
-label = "Commercial Experience"
-value = "1 Year"
+label = "商业项目经验"
+value = "1 年"
 
 [[snapshot]]
-label = "Main Role"
+label = "主要方向"
 value = "System / Gameplay Designer"
 
 [[snapshot]]
-label = "Core Strengths"
+label = "核心能力"
 value = "System Architecture, UGC Editor, Rhythm Gameplay, VR Interaction"
 
 [[snapshot]]
-label = "Games Played"
-value = "2500+ Hours"
+label = "游戏经历"
+value = "2500+ 小时"
 
 [[snapshot]]
-label = "Current Focus"
+label = "当前关注"
 value = "Gameplay System & Level Design"
 
 [[featuredProjects]]
-title = "Hero Esports VR Rhythm Gameplay"
-tags = "Commercial / VR / Gameplay"
-summary = "Designed the core rhythm combat loop for a VR taekwondo project, including note interaction, scoring, combo, health and player feedback."
+title = "英雄电竞 VR 节奏玩法"
+tags = "商业项目 / VR / Gameplay"
+summary = "为 VR 跆拳道项目设计核心节奏战斗循环，包括音符交互、评分、连击、血量与玩家反馈。"
 href = "#"
 
 [[featuredProjects]]
-title = "UGC Chart Editor"
-tags = "Commercial / UGC / Tool Design"
-summary = "Designed a user-generated music chart editor with timeline editing, note placement, playtesting and data structure planning."
+title = "UGC 谱面编辑器"
+tags = "商业项目 / UGC / 工具设计"
+summary = "设计用户生成音乐谱面编辑器，覆盖时间轴编辑、音符放置、试玩验证与数据结构规划。"
 href = "#"
 
 [[featuredProjects]]
-title = "Three-Client Architecture"
-tags = "Commercial / System Design / VR-PC"
-summary = "Designed the interaction boundaries and workflow between player client, referee client and broadcast client for a VR esports scenario."
+title = "三端系统架构"
+tags = "商业项目 / System Design / VR-PC"
+summary = "为 VR 电竞场景设计玩家端、裁判端与转播端之间的交互边界和工作流。"
 href = "#"
 
 [[featuredProjects]]
-title = "Camera & Broadcast Tool"
-tags = "Commercial / Tool Design / Esports"
-summary = "Designed camera control and broadcast support features for match presentation, including preset paths, free camera and special performance shots."
+title = "镜头与转播工具"
+tags = "商业项目 / 工具设计 / 电竞"
+summary = "设计用于赛事呈现的镜头控制与转播辅助功能，包括预设路径、自由镜头和特殊演出镜头。"
 href = "#"
 +++
