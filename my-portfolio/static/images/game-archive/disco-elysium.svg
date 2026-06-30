@@ -1,0 +1,10 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img" aria-label="Disco Elysium cover">
+  <rect width="640" height="360" fill="#111111"/>
+  <rect x="14" y="14" width="612" height="332" fill="none" stroke="#ffffff" stroke-width="4"/>
+  <rect x="410" y="60" width="110" height="210" fill="none" stroke="#f9a8d4" stroke-width="6"/>
+  <path d="M420 96 H508 M420 132 H498 M420 168 H512 M420 204 H488" stroke="#ffffff" stroke-width="4"/>
+  <circle cx="462" cy="286" r="16" fill="#f9a8d4"/>
+  <text x="48" y="104" fill="#ffffff" font-family="monospace" font-size="44" font-weight="700">DISCO</text>
+  <text x="48" y="154" fill="#f9a8d4" font-family="monospace" font-size="44" font-weight="700">ELYSIUM</text>
+  <text x="48" y="310" fill="#ffffff" font-family="monospace" font-size="18">choice / inner voice / text system</text>
+</svg>

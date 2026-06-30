@@ -20,11 +20,6 @@ title ='₊‧꒰ა欢迎来到小灯的个人网站໒꒱ ‧₊'
     pageRef = '/write'
     weight = 3
 
-  [[menus.main]]
-    name = '阅游记'
-    pageRef = '/me'
-    weight = 4    
-
 [module]
   [module.hugoVersion]
     extended = false

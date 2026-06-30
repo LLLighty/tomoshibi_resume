@@ -258,8 +258,11 @@ nav a:hover {
 .section-heading p,
 .project-card p,
 .experience-card p,
-.player-card p,
-.music-card p {
+.music-card p,
+.archive-profile p,
+.impact-card p,
+.genre-card p,
+.archive-database p {
   margin: 0;
 }
 
@@ -279,6 +282,217 @@ nav a:hover {
 .eyebrow,
 .project-tags {
   font-size: 0.8rem;
+}
+
+.game-archive {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.archive-profile {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.archive-profile h3,
+.archive-subheading h3,
+.impact-card h4 {
+  margin: 0;
+}
+
+.archive-profile p {
+  color: #e5e7eb;
+  line-height: 1.8;
+}
+
+.archive-stats {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.archive-stats div {
+  border: 1px solid #ffffff;
+  border-radius: 0.35rem;
+  padding: 0.85rem;
+}
+
+.archive-stats span {
+  color: #f9a8d4;
+  display: block;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.archive-stats small {
+  color: #ffffff;
+}
+
+.archive-tags,
+.game-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.archive-tags span,
+.game-chip-list span,
+.game-entry span {
+  border: 1px solid #ffffff;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  padding: 0.25rem 0.55rem;
+}
+
+.archive-steam-link {
+  justify-self: start;
+}
+
+.archive-block {
+  display: grid;
+  gap: 1rem;
+}
+
+.archive-subheading {
+  margin-bottom: 0;
+}
+
+.impact-grid,
+.genre-accordion,
+.game-database-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.impact-card {
+  display: grid;
+  gap: 1rem;
+  padding: 0.9rem;
+}
+
+.impact-card img {
+  aspect-ratio: 16 / 9;
+  background: #000000;
+  border: 1px solid #ffffff;
+  border-radius: 0.35rem;
+  display: block;
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+.impact-card h4 {
+  color: #ffffff;
+}
+
+.impact-card p:not(.project-tags) {
+  color: #e5e7eb;
+  line-height: 1.7;
+}
+
+.genre-card {
+  padding: 0;
+}
+
+.genre-card summary {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  list-style: none;
+  padding: 1rem 1.25rem;
+}
+
+.genre-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.genre-card summary span {
+  color: #f9a8d4;
+  font-weight: 700;
+}
+
+.genre-card summary small {
+  color: #d1d5db;
+}
+
+.genre-card[open] summary {
+  border-bottom: 1px solid #333333;
+}
+
+.genre-card .game-chip-list,
+.genre-card p {
+  margin: 1rem 1.25rem;
+}
+
+.genre-card p {
+  color: #e5e7eb;
+  line-height: 1.7;
+}
+
+.archive-database {
+  display: grid;
+  gap: 1rem;
+}
+
+.archive-filters {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.archive-filters label {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.archive-filters span {
+  color: #f9a8d4;
+  font-size: 0.75rem;
+}
+
+.archive-filters input,
+.archive-filters select {
+  appearance: none;
+  background: #111111;
+  border: 1px solid #ffffff;
+  border-radius: 0.35rem;
+  color: #ffffff;
+  font: inherit;
+  min-width: 0;
+  padding: 0.55rem 0.7rem;
+}
+
+.archive-filters input:focus,
+.archive-filters select:focus {
+  border-color: #f9a8d4;
+  outline: none;
+}
+
+.game-entry {
+  border: 1px solid #ffffff;
+  border-radius: 0.35rem;
+  display: grid;
+  gap: 0.5rem;
+  min-height: 120px;
+  padding: 0.85rem;
+}
+
+.game-entry strong {
+  color: #ffffff;
+}
+
+.game-entry small {
+  color: #d1d5db;
+  line-height: 1.5;
+}
+
+.archive-empty {
+  color: #f9a8d4;
 }
 
 .button-row {
@@ -417,16 +631,6 @@ nav a:hover {
 
 .experience-card ul {
   margin-bottom: 0;
-}
-
-.player-card {
-  display: grid;
-  gap: 1rem;
-}
-
-.player-card img {
-  width: 64px;
-  height: auto;
 }
 
 .music-section {
@@ -690,9 +894,40 @@ nav a:hover {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .player-card {
-    grid-template-columns: auto 1fr;
+  .archive-profile {
+    grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+    align-items: start;
+  }
+
+  .archive-tags,
+  .archive-steam-link {
+    grid-column: 1 / -1;
+  }
+
+  .archive-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .impact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .impact-grid .impact-card:first-child {
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(240px, 0.8fr) minmax(0, 1.2fr);
     align-items: center;
+  }
+
+  .genre-accordion {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .archive-filters {
+    grid-template-columns: 1.4fr repeat(3, minmax(0, 1fr));
+  }
+
+  .game-database-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .case-grid {

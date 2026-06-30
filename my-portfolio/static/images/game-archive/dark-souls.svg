@@ -1,0 +1,10 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img" aria-label="Dark Souls cover">
+  <rect width="640" height="360" fill="#111111"/>
+  <rect x="14" y="14" width="612" height="332" fill="none" stroke="#ffffff" stroke-width="4"/>
+  <path d="M322 70 L352 208 L320 292 L288 208 Z" fill="#f9a8d4"/>
+  <path d="M220 250 H420" stroke="#ffffff" stroke-width="7"/>
+  <path d="M250 118 H390 M270 150 H370" stroke="#ffffff" stroke-width="4"/>
+  <text x="48" y="104" fill="#ffffff" font-family="monospace" font-size="44" font-weight="700">DARK</text>
+  <text x="48" y="154" fill="#f9a8d4" font-family="monospace" font-size="44" font-weight="700">SOULS</text>
+  <text x="48" y="310" fill="#ffffff" font-family="monospace" font-size="18">shortcut / boss lesson / risk reward</text>
+</svg>

@@ -1,0 +1,10 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img" aria-label="Final Fantasy VII cover">
+  <rect width="640" height="360" fill="#111111"/>
+  <rect x="14" y="14" width="612" height="332" fill="none" stroke="#ffffff" stroke-width="4"/>
+  <circle cx="468" cy="120" r="54" fill="none" stroke="#f9a8d4" stroke-width="7"/>
+  <path d="M468 66 V174 M414 120 H522" stroke="#ffffff" stroke-width="4"/>
+  <path d="M410 250 C445 210 492 210 528 250" fill="none" stroke="#ffffff" stroke-width="5"/>
+  <text x="48" y="104" fill="#ffffff" font-family="monospace" font-size="40" font-weight="700">FINAL FANTASY</text>
+  <text x="48" y="154" fill="#f9a8d4" font-family="monospace" font-size="48" font-weight="700">VII</text>
+  <text x="48" y="310" fill="#ffffff" font-family="monospace" font-size="18">character / music / emotional feedback</text>
+</svg>
