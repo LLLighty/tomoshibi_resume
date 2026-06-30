@@ -15,7 +15,7 @@ title = "个人简历"
 
 ## 个人优势
 
-具备商业项目0-1系统策划经验，参与VR竞技格斗项目《Virtual Taekwondo》&《VTKD：BB》核心玩法、三端系统架构、UGC编辑器、战斗判定与转播观赛系统设计。熟悉Unity / Unreal原型搭建、Figma流程图与交互原型、SQL数据分析及Excel报表，能够从玩法设计、系统拆解、数据验证到落地沟通完整推进设计方案。
+具备商业项目0-1系统策划经验，参与VR竞技格斗项目《Virtual Taekwondo》&《代号TFG》核心玩法、三端系统架构、UGC编辑器、战斗判定与转播观赛系统设计。熟悉Unity / Unreal原型搭建、Figma流程图与交互原型、SQL数据分析及Excel报表，能够从玩法设计、系统拆解、数据验证到落地沟通完整推进设计方案。
 
 ---
 
@@ -45,7 +45,7 @@ title = "个人简历"
 **上海乐竞英雄体育科技有限公司（VSPO英雄电竞）**  
 **系统/玩法策划**
 
-**《Virtual Taekwondo》&《代号VTKD：BB》｜VR&PC_PVP格斗游戏**
+**[《Virtual Taekwondo》](https://virtualtkd.gg/) &《代号TFG》（暂停开发）**
 
 世界跆拳道协会委托的基于VR&AXIS动捕交互的PVP格斗项目，用于电竞赛事化与商业展示场景，包含玩家操作、裁判判罚、转播观赛三端系统。
 
