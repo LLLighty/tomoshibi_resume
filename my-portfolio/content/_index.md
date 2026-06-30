@@ -62,7 +62,7 @@ href = "#"
 title = "三端系统架构"
 tags = "商业项目 / System Design / VR-PC"
 summary = "为 VR 电竞场景设计玩家端、裁判端与转播端之间的交互边界和工作流。"
-href = "#"
+href = "/write/three-client-architecture/"
 
 [[featuredProjects]]
 title = "镜头与转播工具"

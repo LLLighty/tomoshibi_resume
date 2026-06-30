@@ -1,0 +1,185 @@
+{{ define "main" }}
+{{ $loginPdf := .Params.loginPdf | replaceRE "^/" "" | relURL }}
+{{ $settingsPdf := .Params.settingsPdf | replaceRE "^/" "" | relURL }}
+
+<article class="case-study">
+  <header class="case-hero case-hero-split">
+    <div>
+      <p class="eyebrow">{{ .Params.subtitle }}</p>
+      <h1>{{ .Title }}</h1>
+      <p class="case-lead">为 VR 电竞场景搭建可扩展的基础系统框架，让玩家端、裁判端与转播端在统一规则下协作。</p>
+    </div>
+    <aside class="portfolio-card info-card">
+      <h2>项目信息</h2>
+      <dl>
+        <div><dt>项目类型</dt><dd>VR 电竞基础系统</dd></div>
+        <div><dt>我的职责</dt><dd>系统设计 / 配表设计 / 文档沟通</dd></div>
+        <div><dt>涉及模块</dt><dd>登录、账号、设置、多语言、异常处理</dd></div>
+        <div><dt>输出物</dt><dd>登录系统文档、系统设置文档、配置表方案</dd></div>
+      </dl>
+    </aside>
+  </header>
+
+  <section class="portfolio-card">
+    <h2>项目背景</h2>
+    <p>项目需要同时支持 VR 玩家端、PC 裁判端和转播观战端。基础系统不只是登录 / 设置，还要处理账号权限、跨设备登录、顶号、网络异常、多语言、系统设置与未来赛事扩展。</p>
+  </section>
+
+  <section>
+    <h2 class="case-section-title">我的职责</h2>
+    <div class="module-grid">
+      <div class="portfolio-card module-card"><h3>三端权限设计</h3><p>拆分 Player、GM、Spectator 的可用能力与操作边界。</p></div>
+      <div class="portfolio-card module-card"><h3>登录 / 账号流程</h3><p>梳理 Guest、绑定账号、自动登录、顶号与重登流程。</p></div>
+      <div class="portfolio-card module-card"><h3>系统设置规则</h3><p>定义设置项类型、控件类型、默认值与运行时读取方式。</p></div>
+      <div class="portfolio-card module-card"><h3>异常状态处理</h3><p>把网络断开、Loading 中断、房间内顶号等情况前置成状态表。</p></div>
+      <div class="portfolio-card module-card"><h3>Dialog Key 与多语言</h3><p>通过统一 Key 管理弹窗文案和多语言映射。</p></div>
+      <div class="portfolio-card module-card"><h3>配表结构设计</h3><p>让配置可被程序读取，也便于策划维护和扩展。</p></div>
+      <div class="portfolio-card module-card"><h3>文档与沟通</h3><p>输出系统文档，和程序、UI、测试同步边界与规则。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="case-section-title">设计思路</h2>
+    <div class="case-grid">
+      <div class="portfolio-card">
+        <h3>Framework</h3>
+        <p>将 Player、GM、Spectator、Guest 等身份抽象为 Role，并区分账号类型、客户端类型与权限能力。</p>
+      </div>
+      <div class="portfolio-card">
+        <h3>Configuration</h3>
+        <p>将设置项按 bool / int / char 等参数类型与控件类型拆分，便于读取、维护与扩展。</p>
+      </div>
+      <div class="portfolio-card">
+        <h3>Scalability</h3>
+        <p>通过统一配置、统一状态、统一异常处理，让后续新增功能不需要推翻底层结构。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="case-section-title">系统结构展示</h2>
+    <div class="case-grid">
+      <div class="portfolio-card">
+        <h3>三端权限结构图</h3>
+        <div class="role-map">
+          <div><strong>Player</strong><span>Gameplay</span><span>VR Interaction</span><span>Settings</span></div>
+          <div><strong>GM</strong><span>Match Control</span><span>Room State</span><span>Rule Override</span></div>
+          <div><strong>Spectator</strong><span>Broadcast</span><span>Camera View</span><span>Match Info</span></div>
+        </div>
+      </div>
+      <div class="portfolio-card">
+        <h3>登录状态流转图</h3>
+        <div class="flow-row compact-flow">
+          <span>Guest</span>
+          <span>Bind Account</span>
+          <span>Player / GM</span>
+          <span>Auto Login</span>
+          <span>Kick Out</span>
+          <span>Re-login</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio-card">
+    <h2>配表设计示例</h2>
+    <div class="table-wrap">
+      <table class="case-table">
+        <thead>
+          <tr>
+            <th>Config Key</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Runtime</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>language</td>
+            <td>char</td>
+            <td>zh-CN</td>
+            <td>client</td>
+            <td>语言配置与多语言 Key 映射</td>
+          </tr>
+          <tr>
+            <td>comfort_turn</td>
+            <td>bool</td>
+            <td>true</td>
+            <td>VR</td>
+            <td>VR 舒适转向开关</td>
+          </tr>
+          <tr>
+            <td>volume_master</td>
+            <td>int</td>
+            <td>80</td>
+            <td>client</td>
+            <td>主音量滑杆配置</td>
+          </tr>
+          <tr>
+            <td>dialog_kickout</td>
+            <td>char</td>
+            <td>LOGIN_003</td>
+            <td>global</td>
+            <td>顶号弹窗 Dialog Key</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="portfolio-card">
+    <h2>异常处理矩阵</h2>
+    <div class="table-wrap">
+      <table class="case-table">
+        <thead>
+          <tr>
+            <th>场景</th>
+            <th>系统行为</th>
+            <th>Dialog Key</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>顶号</td><td>当前端弹窗提示并退出登录态</td><td>LOGIN_KICK_001</td></tr>
+          <tr><td>网络断开</td><td>冻结关键操作，提示重连或返回登录</td><td>NET_LOST_001</td></tr>
+          <tr><td>Loading 中断</td><td>记录当前状态，回退到安全入口</td><td>LOAD_FAIL_001</td></tr>
+          <tr><td>房间中被顶号</td><td>通知房间状态，释放席位并提示重登</td><td>ROOM_KICK_001</td></tr>
+          <tr><td>Guest 绑定</td><td>校验绑定状态，成功后刷新 Role 权限</td><td>BIND_OK_001</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="case-section-title">设计亮点</h2>
+    <div class="module-grid">
+      <div class="portfolio-card module-card"><p>把复杂流程拆成可配置规则。</p></div>
+      <div class="portfolio-card module-card"><p>把异常情况前置成状态表。</p></div>
+      <div class="portfolio-card module-card"><p>用 Role 管理权限，而不是写死客户端。</p></div>
+      <div class="portfolio-card module-card"><p>让设置系统同时适配 VR 射线交互与 PC 鼠标交互。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="case-section-title">文档摘录</h2>
+    <div class="excerpt-grid">
+      <div class="portfolio-card excerpt-card"><span>登录流程图</span><div class="mini-flow">Guest → Bind → Auto Login</div></div>
+      <div class="portfolio-card excerpt-card"><span>顶号处理表</span><div class="mini-table">Kick Out / Room / Re-login</div></div>
+      <div class="portfolio-card excerpt-card"><span>设置系统分层图</span><div class="mini-flow">Config → Control → Runtime</div></div>
+      <div class="portfolio-card excerpt-card"><span>控件配表示例</span><div class="mini-table">Key / Type / Default</div></div>
+    </div>
+    <div class="button-row case-actions">
+      <a class="pixel-button" href="{{ $loginPdf }}" target="_blank" rel="noopener noreferrer">查看登录文档摘录</a>
+      <a class="pixel-button" href="{{ $settingsPdf }}" target="_blank" rel="noopener noreferrer">查看设置文档摘录</a>
+      <a class="pixel-button" href="{{ $loginPdf }}" download>下载登录 PDF</a>
+      <a class="pixel-button" href="{{ $settingsPdf }}" download>下载设置 PDF</a>
+    </div>
+  </section>
+
+  <section class="portfolio-card">
+    <h2>复盘</h2>
+    <p>这个案例的价值不在于单个登录页面，而在于建立可维护、可扩展、可落地的基础系统方案。</p>
+    <p>通过统一的权限、配置和异常处理规则，可以降低程序实现和后续迭代成本。</p>
+  </section>
+</article>
+{{ end }}

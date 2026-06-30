@@ -530,6 +530,97 @@ nav a:hover {
   color: #f9a8d4;
 }
 
+.case-hero-split {
+  display: grid;
+  gap: 1rem;
+}
+
+.case-lead {
+  margin-top: 0.8rem;
+  color: #ffffff;
+  line-height: 1.8;
+}
+
+.info-card dl,
+.info-card dd {
+  margin: 0;
+}
+
+.info-card dl {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.info-card dt {
+  color: #f9a8d4;
+  font-size: 0.75rem;
+}
+
+.role-map,
+.excerpt-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.role-map div {
+  border: 1px solid #ffffff;
+  border-radius: 0.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.75rem;
+}
+
+.role-map strong,
+.excerpt-card span {
+  color: #f9a8d4;
+}
+
+.role-map span,
+.mini-flow,
+.mini-table {
+  color: #ffffff;
+  font-size: 0.85rem;
+}
+
+.compact-flow {
+  grid-template-columns: 1fr;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.case-table {
+  border-collapse: collapse;
+  min-width: 680px;
+  width: 100%;
+}
+
+.case-table th,
+.case-table td {
+  border: 1px solid #ffffff;
+  padding: 0.65rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.case-table th {
+  color: #f9a8d4;
+}
+
+.excerpt-card {
+  min-height: 120px;
+}
+
+.mini-flow,
+.mini-table {
+  border: 1px solid #ffffff;
+  border-radius: 0.35rem;
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+}
+
 @media (min-width: 768px) {
   .home-hero {
     grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
@@ -563,5 +654,18 @@ nav a:hover {
 
   .flow-row {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .case-hero-split {
+    grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+    align-items: start;
+  }
+
+  .role-map {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .excerpt-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
