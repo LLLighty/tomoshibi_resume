@@ -27,7 +27,7 @@
 			{{ range $p.snapshot }}
 				<div>
 					<dt>{{ .label }}</dt>
-					<dd>{{ .value }}</dd>
+					<dd>{{ .value | markdownify }}</dd>
 				</div>
 			{{ end }}
 		</dl>

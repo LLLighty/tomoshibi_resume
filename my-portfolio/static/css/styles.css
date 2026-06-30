@@ -663,6 +663,10 @@ nav a:hover {
 .snapshot-list dd {
   color: #ffffff;
   line-height: 1.6;
+  white-space: pre-line;
+}
+.snapshot-list dd p {
+  margin: 0;
 }
 .home-section {
   margin-top: 3rem;

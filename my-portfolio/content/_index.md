@@ -42,6 +42,10 @@ value = "系统搭建, UGC 编辑器设计, 格斗与音乐游戏规则设计, V
 label = "游戏经历"
 value = "2500+ 小时"
 
+[[snapshot]]
+label = "正在深入"
+value = "▸ 交互设计\n▸ 关卡设计\n▸ 引擎技术"
+
 [[featuredProjects]]
 title = "VTKD & 代号TFG"
 tags = "商业项目 / VR / Gameplay"
