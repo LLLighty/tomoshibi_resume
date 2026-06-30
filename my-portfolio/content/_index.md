@@ -31,11 +31,11 @@ value = "1 年"
 
 [[snapshot]]
 label = "主要方向"
-value = "System / Gameplay Designer"
+value = "系统设计 / 玩法策划"
 
 [[snapshot]]
 label = "核心能力"
-value = "System Architecture, UGC Editor, Rhythm Gameplay, VR Interaction"
+value = "系统搭建, UGC 编辑器设计, 格斗与音乐游戏规则设计, VR&PC端体验设计"
 
 [[snapshot]]
 label = "游戏经历"
@@ -43,7 +43,7 @@ value = "2500+ 小时"
 
 [[snapshot]]
 label = "当前关注"
-value = "Gameplay System & Level Design"
+value = "玩法框架 & 关卡策划"
 
 [[featuredProjects]]
 title = "VSPO 代号TFG"
