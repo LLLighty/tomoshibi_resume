@@ -15,7 +15,7 @@
 					{{ if hasPrefix $href "/" }}
 						{{ $href = $href | replaceRE "^/" "" | relURL }}
 					{{ end }}
-					<a class="pixel-button" href="{{ $href }}">{{ .label }}</a>
+					<a class="pixel-button" href="{{ $href }}"{{ if .download }} download{{ end }}>{{ .label }}</a>
 				{{ end }}
 			</div>
 		</div>

@@ -18,8 +18,9 @@ label = "查看项目"
 href = "#featured-projects"
 
 [[heroButtons]]
-label = "简历"
+label = "下载简历"
 href = "/files/tong-tianqi-resume.pdf"
+download = true
 
 [[heroButtons]]
 label = "联系方式"
