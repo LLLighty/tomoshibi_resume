@@ -16,46 +16,6 @@
                 {{ block "main" . }}{{ end }}
             </div>
         </main>
-        {{ if .IsHome }}
-        {{ with site.GetPage "section" "experience" }}
-        <section class="mx-auto w-full max-w-4xl px-4 py-4 mt-8">
-            <style>
-                .home-work-experience h3,
-                .home-work-experience h3 + p strong {
-                    color: rgba(255, 188, 226, 0.82);
-                }
-            </style>
-            <div class="not-prose mb-4">
-                <h2 class="text-xl font-bold text-white">⋅˚₊‧ 工作经历 ୧ ‧₊˚ ⋅</h2>
-                <a class="text-sm text-white underline" href="{{ "files/tong-tianqi-resume.pdf" | relURL }}" download>点击下载我的简历 →</a>
-            </div>
-            <div class="home-work-experience rounded-lg border border-white p-6">
-                <h2>2025.04-2026.6（实习转正）</h2>
-                <h3>上海乐竞英雄体育科技有限公司（VSPO英雄电竞）</h3>
-                <p><strong>系统/玩法策划</strong></p>
-                <p><strong>《Virtual Taekwondo》&amp;《代号VTKD：BB》｜VR&amp;PC_PVP格斗游戏</strong></p>
-                <p>世界跆拳道协会委托的基于VR&amp;AXIS动捕交互的PVP格斗项目，用于电竞赛事化与商业展示场景，包含玩家操作、裁判判罚、转播观赛三端系统。</p>
-                <p><strong>个人职责：</strong></p>
-                <ul>
-                    <li><strong>系统架构设计：</strong> 主导项目0-1阶段系统框架设计，拆分玩家端、裁判端、转播端的功能边界与交互逻辑，解决VR与PC多端输入、判定、展示需求不一致的问题。</li>
-                    <li><strong>战斗判定与数值框架：</strong> 搭建角色技能判定、受击反馈与数值成长框架，结合AXIS动捕数据进行帧数级调优，优化攻击命中感、动作节奏与竞技平衡。</li>
-                    <li><strong>UGC编辑器设计：</strong> 设计类Beat Saber玩法的UGC谱面系统，定义音符判定、轨道逻辑、数据结构与配置规则，支持玩家内容创作与后续玩法扩展。</li>
-                    <li><strong>联机与匹配逻辑：</strong> 参与局外玩法异步联机匹配方案设计，梳理玩家数据、谱面数据与结算逻辑之间的关系，降低实时同步压力并提升玩法可扩展性。</li>
-                    <li><strong>转播观赛系统：</strong> 设计转播端智能运镜与观赛信息展示逻辑，强化格斗演出、赛事节奏与观众理解成本。</li>
-                    <li><strong>测试与产品化支持：</strong> 构建CE测试量化评估思路，参与行业调研与商业化展示方案输出，推动项目向赛事化、展台展示与商业合作方向延展。</li>
-                </ul>
-                <hr>
-                <h2>2024.06-2024.08（实习）</h2>
-                <h3>珠海金山数字网络科技有限公司（西山居）</h3>
-                <p><strong>游戏行业研究实习生</strong></p>
-                <ul>
-                    <li><strong>竞品策略与商业化拆解：</strong> 复盘《地狱潜兵》《鸣潮》《绝区零》等海内外核心产品的宣发全链路与商业化策略，撰写深度报告支持在研项目《解限机》与《尘白禁区》的成熟期运营。</li>
-                    <li><strong>调研体系与数据可视化：</strong> 参与制定市场调研SOP，利用MySQL整合YouTube、B站等平台的4000+数据点及UGC内容，搭建用户评价标签体系，通过可视化报表为业务决策提供数据支撑。</li>
-                </ul>
-            </div>
-        </section>
-        {{ end }}
-        {{ end }}
         <div class="flex justify-center">
             <img src="{{ "border-home1.png" | relURL }}" alt="border-home1" />
         </div>

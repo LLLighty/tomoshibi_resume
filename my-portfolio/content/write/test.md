@@ -7,6 +7,20 @@ listIcon = "/writing.png"
 teaser = "从战斗、防御、武器组装、军团义手、资源循环、叙事与音乐系统等角度，分析《匹诺曹的谎言》的系统设计完成度与可借鉴之处。"
 +++
 
+## 系统拆解
+
+![核心玩法系统拆解](/images/lies-of-p/core-gameplay.png)
+
+![角色系统拆解](/images/lies-of-p/character-system.png)
+
+![道具系统拆解](/images/lies-of-p/item-system.png)
+
+![敌人系统拆解](/images/lies-of-p/enemy-system.png)
+
+![世界观与叙事系统拆解](/images/lies-of-p/world-narrative.png)
+
+## 设计分析
+
 笔者于2024年12月至2025年1月期间体验了《匹诺曹的谎言》，体验平台为PC Steam版，设备为 i7 + RTX 3070 Ti 笔记本电脑。全程在较高画质设置下运行，未遇到明显掉帧、卡顿或渲染错误，整体优化表现稳定。作为一款由韩国 Round8 Studio 开发、Neowiz Games 发行的类魂动作角色扮演游戏，《匹诺曹的谎言》在韩国单机主机游戏市场中具有较强的代表性。Round8 Studio 在本作之前曾开发过 MMORPG《神佑释放》，该作虽因优化、服务器稳定性与内容质量问题受到较多争议，但也促使团队从竞争激烈且高度饱和的韩国 MMORPG 市场转向主机单机动作游戏赛道。
 
 《匹诺曹的谎言》于2023年9月18日发售，登陆 Steam、PlayStation、Xbox 等平台，并首发加入 Xbox Game Pass。游戏发售不到一个月销量突破100万份，截至2024年4月累计玩家超过700万。对于 Neowiz Games 而言，该作也成为其拓展全球单机游戏市场的重要项目，并帮助公司在2023财年取得显著增长。由此可见，《匹诺曹的谎言》的成功并不只来自“类魂”标签，而是建立在较高工业完成度、明确美术风格、稳定系统框架和持续版本调优之上的综合结果。

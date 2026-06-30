@@ -1,32 +1,169 @@
 {{ define "main" }}
 {{ $p := .Params }}
-<div class="grid lg:grid-cols-2 gap-4">
-	<div class="not-prose flex cursor-default flex-col space-y-4 rounded-lg border border-white p-4">
-		<img src="{{ (or $p.portraitImage "/portrait.png") | replaceRE "^/" "" | relURL }}" alt="Portrait" class="w-full h-auto">
-		<div>
-			{{ with $p.introTitle }}<strong>{{ . }}</strong>{{ end }}
-			{{ with $p.introBody }}{{ . | markdownify }}{{ end }}
-		</div>
-	</div>
-	<div class="grid lg:grid-rows-2 gap-4">
-		<div class="not-prose flex cursor-default flex-col space-y-2 rounded-lg border border-white p-6">
-			<img src="{{ (or $p.statusImage "/status.png") | replaceRE "^/" "" | relURL }}" alt="Status" class="self-start">
-			{{ with $p.statusText }}<div>{{ . | markdownify }}</div>{{ end }}
-		</div>
-		<div class="not-prose flex cursor-default flex-col space-y-4 rounded-lg border border-white p-6">
-			<div class="space-y-1">
-				{{ with $p.musicLabel }}<p class="text-sm text-pink-200">{{ . }}</p>{{ end }}
-				{{ with $p.musicTitle }}<h2 class="m-0 text-lg font-bold">{{ . }}</h2>{{ end }}
-				{{ with $p.musicArtist }}<p class="m-0 text-sm">{{ . }}</p>{{ end }}
+
+<section class="home-hero">
+	<div class="portfolio-card hero-profile">
+		<img src="{{ (or $p.portraitImage "/portrait.png") | replaceRE "^/" "" | relURL }}" alt="小灯 / Carol Tong" class="hero-portrait">
+		<div class="hero-copy">
+			<h1>{{ or $p.heroTitle "小灯 / Carol Tong" }}</h1>
+			<p class="hero-subtitle">{{ or $p.heroSubtitle "System Designer / Gameplay Designer" }}</p>
+			<p class="hero-tags">{{ or $p.heroTags "VR · PC · UGC · Gameplay · System Design" }}</p>
+			<p>{{ or $p.heroBody "一年商业游戏开发经验，参与 VR/PC 双端格斗与节奏玩法项目，负责系统架构、玩法系统、UGC 编辑器与多端交互流程设计。" }}</p>
+			<div class="button-row">
+				{{ range $p.heroButtons }}
+					<a class="pixel-button" href="{{ .href }}">{{ .label }}</a>
+				{{ end }}
 			</div>
-			{{ with $p.musicFile }}
-				{{ $musicFile := . | replaceRE "^/" "" | relURL }}
-				<audio class="w-full" controls preload="metadata" src="{{ $musicFile }}">
-					<a href="{{ $musicFile }}">播放音乐</a>
-				</audio>
-			{{ end }}
 		</div>
 	</div>
-</div>
+
+	<div class="portfolio-card snapshot-card">
+		<p class="eyebrow">Career Snapshot</p>
+		<dl class="snapshot-list">
+			{{ range $p.snapshot }}
+				<div>
+					<dt>{{ .label }}</dt>
+					<dd>{{ .value }}</dd>
+				</div>
+			{{ end }}
+		</dl>
+	</div>
+</section>
+
+<section id="featured-projects" class="home-section">
+	<div class="section-heading">
+		<h2>Featured Projects</h2>
+		<p>Selected works that show my system design, gameplay design and implementation thinking.</p>
+	</div>
+	<div class="project-grid">
+		{{ range $p.featuredProjects }}
+			<article class="portfolio-card project-card">
+				<p class="project-tags">{{ .tags }}</p>
+				<h3>{{ .title }}</h3>
+				<p>{{ .summary }}</p>
+				<a class="case-link" href="{{ .href }}">View Case Study</a>
+			</article>
+		{{ end }}
+	</div>
+</section>
+
+<section class="home-section">
+	<div class="section-heading">
+		<h2>Work Experience</h2>
+	</div>
+	<article class="portfolio-card experience-card">
+		<div class="experience-meta">
+			<div>
+				<p class="eyebrow">Company</p>
+				<h3>上海乐竞英雄体育科技有限公司（VSPO英雄电竞）</h3>
+			</div>
+			<div>
+				<p class="eyebrow">Role</p>
+				<p>系统/玩法策划</p>
+			</div>
+			<div>
+				<p class="eyebrow">Time</p>
+				<p>2025.04 - 2026.06（实习转正）</p>
+			</div>
+			<div>
+				<p class="eyebrow">Project</p>
+				<p>《Virtual Taekwondo》&amp;《代号VTKD：BB》</p>
+			</div>
+		</div>
+		<div class="experience-body">
+			<div>
+				<h4>Project Context</h4>
+				<p>世界跆拳道协会委托的 VR/PC PVP 格斗项目，用于电竞赛事化与商业展示场景，包含玩家操作、裁判判罚、转播观赛三端系统。</p>
+			</div>
+			<div>
+				<h4>My Role</h4>
+				<p>负责系统架构、玩法系统、UGC 编辑器、多端交互流程、系统文档与落地沟通。</p>
+			</div>
+			<div>
+				<h4>Key Contributions</h4>
+				<ul>
+					<li>设计玩家端、裁判端、转播端的功能边界与交互流程。</li>
+					<li>梳理 VR/PC 双端输入、判定、展示与赛事流程差异。</li>
+					<li>设计节奏战斗玩法，包括音符交互、评分、连击、血量与反馈。</li>
+					<li>设计 UGC 谱面编辑器的时间轴编辑、音符配置、试玩与数据结构。</li>
+					<li>设计转播/镜头工具，支持预设路径、自由镜头与特殊演出镜头。</li>
+				</ul>
+			</div>
+			<div>
+				<h4>Tools / Skills</h4>
+				<p>System Design, Gameplay Design, UGC Tool Design, VR Interaction, Documentation, Cross-functional Communication, Unity / Unreal Prototype Thinking, Figma, Excel, SQL</p>
+			</div>
+		</div>
+	</article>
+	<article class="portfolio-card experience-card secondary-experience">
+		<div class="experience-meta">
+			<div>
+				<p class="eyebrow">Company</p>
+				<h3>珠海金山数字网络科技有限公司（西山居）</h3>
+			</div>
+			<div>
+				<p class="eyebrow">Role</p>
+				<p>游戏行业研究实习生</p>
+			</div>
+			<div>
+				<p class="eyebrow">Time</p>
+				<p>2024.06 - 2024.08（实习）</p>
+			</div>
+			<div>
+				<p class="eyebrow">Project</p>
+				<p>《解限机》与《尘白禁区》运营研究支持</p>
+			</div>
+		</div>
+		<div class="experience-body">
+			<div>
+				<h4>Project Context</h4>
+				<p>面向在研与运营项目的市场、竞品、宣发与用户评价研究，为项目策略和成熟期运营提供参考。</p>
+			</div>
+			<div>
+				<h4>My Role</h4>
+				<p>负责竞品拆解、调研 SOP、平台数据整理与可视化分析。</p>
+			</div>
+			<div>
+				<h4>Key Contributions</h4>
+				<ul>
+					<li>复盘《地狱潜兵》《鸣潮》《绝区零》等产品的宣发链路与商业化策略。</li>
+					<li>整合 YouTube、B 站等平台 4000+ 数据点及 UGC 内容。</li>
+					<li>搭建用户评价标签体系，并通过可视化报表支持业务判断。</li>
+				</ul>
+			</div>
+			<div>
+				<h4>Tools / Skills</h4>
+				<p>Market Research, Competitive Analysis, MySQL, Data Visualization, Report Writing</p>
+			</div>
+		</div>
+	</article>
+</section>
+
+<section class="home-section">
+	<div class="section-heading">
+		<h2>Player Background</h2>
+	</div>
+	<div class="portfolio-card player-card">
+		<img src="{{ "status.png" | relURL }}" alt="Player Background">
+		<p>{{ or $p.playerBackground "2500+ 小时跨平台游戏经历，覆盖魂系、开放世界、动作 RPG、JRPG、CRPG、独立游戏与二次元手游。长期关注系统拆解、战斗机制、关卡结构与叙事体验。" }}</p>
+	</div>
+</section>
+
+<section id="contact" class="home-section music-section">
+	<div class="portfolio-card music-card">
+		<div class="space-y-1">
+			{{ with $p.musicLabel }}<p class="eyebrow">{{ . }}</p>{{ end }}
+			{{ with $p.musicTitle }}<h2>{{ . }}</h2>{{ end }}
+			{{ with $p.musicArtist }}<p>{{ . }}</p>{{ end }}
+		</div>
+		{{ with $p.musicFile }}
+			{{ $musicFile := . | replaceRE "^/" "" | relURL }}
+			<audio class="w-full" controls preload="metadata" src="{{ $musicFile }}">
+				<a href="{{ $musicFile }}">播放音乐</a>
+			</audio>
+		{{ end }}
+	</div>
+</section>
+
 {{ .Content }}
 {{ end }}
