@@ -901,7 +901,7 @@ nav a:hover {
 }
 .contact-module {
   margin: 0 auto;
-  max-width: 64rem;
+  max-width: 56rem;
 }
 .contact-panel {
   border: 1px solid #ffffff;
@@ -926,7 +926,7 @@ nav a:hover {
   line-height: 1.2;
 }
 .contact-heading .eyebrow, .contact-icon, .contact-card-title, .contact-card small, .contact-credit a {
-  color: #ff3fbd;
+  color: #ffd84d;
 }
 .contact-heading p:not(.eyebrow) {
   color: #e5e7eb;
@@ -954,8 +954,8 @@ nav a:hover {
   width: 100%;
 }
 .contact-card:hover, .contact-card:focus-visible, .contact-card.is-copied {
-  border-color: #ff3fbd;
-  box-shadow: 0 0 0 1px rgba(255, 63, 189, 0.35), 0 0 18px rgba(255, 63, 189, 0.18);
+  border-color: #ffd84d;
+  box-shadow: 0 0 0 1px rgba(255, 216, 77, 0.35), 0 0 18px rgba(255, 216, 77, 0.2);
   transform: translateY(-2px);
 }
 .contact-card:focus-visible {
@@ -963,7 +963,7 @@ nav a:hover {
 }
 .contact-icon {
   align-items: center;
-  border: 1px solid #ff3fbd;
+  border: 1px solid #ffd84d;
   border-radius: 0.35rem;
   display: inline-flex;
   font-size: 1.05rem;
@@ -987,7 +987,7 @@ nav a:hover {
   line-height: 1.4;
 }
 .copy-chip {
-  border: 1px solid #ff3fbd;
+  border: 1px solid #ffd84d;
   border-radius: 999px;
   display: inline-flex;
   justify-content: center;
@@ -995,7 +995,7 @@ nav a:hover {
   padding: 0.32rem 0.65rem;
 }
 .contact-card:hover .copy-chip, .contact-card:focus-visible .copy-chip, .contact-card.is-copied .copy-chip {
-  background: rgba(255, 63, 189, 0.14);
+  background: rgba(255, 216, 77, 0.14);
 }
 .contact-credit {
   border-top: 1px solid #333333;
