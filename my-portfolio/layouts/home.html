@@ -3,12 +3,16 @@
 
 <section class="home-hero">
 	<div class="portfolio-card hero-profile">
-		<img src="{{ (or $p.portraitImage "/portrait.png") | replaceRE "^/" "" | relURL }}" alt="{{ or $p.heroTitle "小灯（佟天琪）" }}" class="hero-portrait">
+		<div class="hero-portrait-frame">
+			<img src="{{ (or $p.portraitImage "/portrait.png") | replaceRE "^/" "" | relURL }}" alt="{{ or $p.heroTitle "小灯（佟天琪）" }}" class="hero-portrait">
+		</div>
 		<div class="hero-copy">
-			<h1>{{ or $p.heroTitle "小灯 / Carol Tong" }}</h1>
-			<p class="hero-subtitle">{{ or $p.heroSubtitle "System Designer / Gameplay Designer" }}</p>
+			<div class="hero-title-block">
+				<h1>{{ or $p.heroTitle "小灯 / Carol Tong" }}</h1>
+				<p class="hero-subtitle">{{ or $p.heroSubtitle "System Designer / Gameplay Designer" }}</p>
+			</div>
 			<p class="hero-tags">{{ or $p.heroTags "VR · PC · UGC · Gameplay · System Design" }}</p>
-			<p>{{ or $p.heroBody "一年商业游戏开发经验，参与 VR/PC 双端格斗与节奏玩法项目，负责系统架构、玩法系统、UGC 编辑器与多端交互流程设计。" }}</p>
+			<p class="hero-intro">{{ or $p.heroBody "一年商业游戏开发经验，参与 VR/PC 双端格斗与节奏玩法项目，负责系统架构、玩法系统、UGC 编辑器与多端交互流程设计。" }}</p>
 			<div class="button-row">
 				{{ range $p.heroButtons }}
 					{{ $href := .href }}
