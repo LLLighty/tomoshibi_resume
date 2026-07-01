@@ -28,7 +28,7 @@ href = "#contact"
 
 [[snapshot]]
 label = "学历"
-value = "杜伦大学（英国）- 犯罪学"
+value = "杜伦大学（QS86） - 犯罪学 · 本科"
 
 [[snapshot]]
 label = "商业项目经验"
