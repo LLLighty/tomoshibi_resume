@@ -13,8 +13,6 @@
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-4xl: 56rem;
-    --text-xs: 0.75rem;
-    --text-xs--line-height: calc(1 / 0.75);
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-xl: 1.25rem;
@@ -916,6 +914,8 @@ nav a:hover {
 .contact-heading {
   display: grid;
   gap: 0.5rem;
+  justify-items: center;
+  text-align: center;
 }
 .contact-heading h2, .contact-heading p, .contact-credit {
   margin: 0;
@@ -937,6 +937,7 @@ nav a:hover {
   gap: 1rem;
 }
 .contact-card {
+  align-items: center;
   appearance: none;
   background: #111111;
   border: 1px solid #ffffff;
@@ -945,9 +946,10 @@ nav a:hover {
   cursor: pointer;
   display: grid;
   gap: 0.55rem;
+  justify-items: center;
   min-height: 150px;
   padding: 1.2rem;
-  text-align: left;
+  text-align: center;
   transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
   width: 100%;
 }
@@ -976,7 +978,7 @@ nav a:hover {
 }
 .contact-card strong {
   color: #ffffff;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   line-height: 1.45;
   overflow-wrap: anywhere;
 }
@@ -984,10 +986,22 @@ nav a:hover {
   font-size: 0.72rem;
   line-height: 1.4;
 }
+.copy-chip {
+  border: 1px solid #ff3fbd;
+  border-radius: 999px;
+  display: inline-flex;
+  justify-content: center;
+  min-width: 8.25rem;
+  padding: 0.32rem 0.65rem;
+}
+.contact-card:hover .copy-chip, .contact-card:focus-visible .copy-chip, .contact-card.is-copied .copy-chip {
+  background: rgba(255, 63, 189, 0.14);
+}
 .contact-credit {
   border-top: 1px solid #333333;
   color: #d1d5db;
   font-size: 0.75rem;
+  text-align: center;
   padding-top: 1rem;
 }
 .system-breakdown-gallery {
