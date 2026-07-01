@@ -1015,9 +1015,10 @@ nav a:hover {
 }
 .contact-card strong {
   color: #ffffff;
-  font-size: 1.25rem;
+  font-size: clamp(0.95rem, 1.8vw, 1.25rem);
   line-height: 1.45;
-  overflow-wrap: anywhere;
+  overflow-wrap: normal;
+  white-space: nowrap;
 }
 .contact-card small {
   font-size: 0.72rem;
