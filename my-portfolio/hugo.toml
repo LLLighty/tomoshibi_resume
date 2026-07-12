@@ -11,9 +11,11 @@ title ='₊‧꒰ა欢迎来到小灯的个人网站໒꒱ ‧₊'
       image = '/digigarden2025.png'
 
   [[menus.main]]
-    name = '简历'
-    pageRef = '/experience'
+    name = '简历下载'
+    url = '/files/tong-tianqi-resume.pdf'
     weight = 2
+    [menus.main.params]
+      download = true
 
   [[menus.main]]
     name = '作品集'

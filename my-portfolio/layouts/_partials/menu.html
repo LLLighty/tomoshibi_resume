@@ -22,6 +22,9 @@
     {{- $page := .page }}
     {{- range .menuEntries }}
       {{- $attrs := dict "href" .URL }}
+      {{- if .Params.download }}
+        {{- $attrs = merge $attrs (dict "download" "download") }}
+      {{- end }}
       {{- $name := .Name }}
       {{- with .Identifier }}
         {{- with T . }}
