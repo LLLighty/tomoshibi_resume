@@ -2,9 +2,9 @@
 portraitImage = "/portrait.png"
 
 heroTitle = "小灯（佟天琪）"
-heroSubtitle = "System Designer / Gameplay Designer"
-heroTags = "VR&PC端 · Unity · UE5 · Godot"
-heroBody = "一年商业游戏开发经验，参与 VR/PC 双端格斗与节奏玩法项目，负责系统架构、玩法系统、UGC 编辑器与多端交互流程设计。习惯从玩家体验出发拆解系统，并把设计落到可执行的结构中。"
+heroSubtitle = "战斗&系统策划"
+heroTags = "三端 · ARPG · 类魂 · 格斗"
+heroBody = "一年商业游戏研发经验，参与出海 VR/PC 动作竞技项目从 0 到 1 的 Gameplay 设计，负责战斗机制、角色技能、系统架构及 UGC 编辑器、多语本地化等内容。擅长从玩家体验出发拆解玩法，结合数据分析与原型验证推动设计落地，目前专注于提升战斗与关卡设计能力，并持续制作个人 Gameplay Demo。"
 
 playerBackground = "3000+ 小时主机与PC&手游经历，覆盖魂系、开放世界、动作 RPG、JRPG、CRPG、独立游戏与二次元手游。长期关注系统拆解、战斗机制、关卡结构与叙事体验。"
 
@@ -28,7 +28,7 @@ href = "#contact"
 
 [[snapshot]]
 label = "学历"
-value = "杜伦大学（QS86） - 犯罪学 · 本科"
+value = "杜伦大学（QS86）\n犯罪学 · 本科"
 
 [[snapshot]]
 label = "商业项目经验"
@@ -40,7 +40,7 @@ value = "系统设计 / 玩法策划"
 
 [[snapshot]]
 label = "核心能力"
-value = "系统搭建, UGC 编辑器设计, 格斗与音乐游戏规则设计, VR&PC端体验设计"
+value = "从0-1进行玩法构筑、战斗规则、系统设计、UGC、AI工作流的设计"
 
 [[snapshot]]
 label = "游戏经历"
@@ -48,10 +48,10 @@ value = "3000+ 小时主机与PC&手游"
 
 [[snapshot]]
 label = "正在深入"
-value = "▸ 交互设计\n▸ 关卡设计\n▸ 引擎技术"
+value = "▸ ARPG\n▸ FPS & TPS\n▸ 类魂"
 
 [[featuredProjects]]
-title = "代号TFG - VR体感音游"
+title = "VR动捕音游原型设计与实现"
 tags = "商业项目 / VR / Gameplay"
 summary = "负责设计局外音游玩法的核心循环，包括音符交互、评分、连击、血量与玩家反馈。"
 href = "/write/vspo-tfg/"
