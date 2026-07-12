@@ -45,7 +45,27 @@
 			{{ if hasPrefix $caseHref "/" }}
 				{{ $caseHref = $caseHref | replaceRE "^/" "" | relURL }}
 			{{ end }}
-			<article class="portfolio-card project-card">
+			{{ $typeClass := "project-card-gameplay" }}
+			{{ $typeLabel := "Gameplay" }}
+			{{ $typeIcon := "▶" }}
+			{{ if in .title "UGC" }}
+				{{ $typeClass = "project-card-tool" }}
+				{{ $typeLabel = "Tool" }}
+				{{ $typeIcon = "▣" }}
+			{{ else if in .title "三端" }}
+				{{ $typeClass = "project-card-system" }}
+				{{ $typeLabel = "System" }}
+				{{ $typeIcon = "▤" }}
+			{{ else if in .title "角色" }}
+				{{ $typeClass = "project-card-combat" }}
+				{{ $typeLabel = "Character Combat" }}
+				{{ $typeIcon = "✦" }}
+			{{ end }}
+			<article class="portfolio-card project-card {{ $typeClass }}">
+				<div class="project-type-badge">
+					<span aria-hidden="true">{{ $typeIcon }}</span>
+					<span>{{ $typeLabel }}</span>
+				</div>
 				<p class="project-tags">{{ .tags }}</p>
 				<h3>{{ .title }}</h3>
 				<p>{{ .summary }}</p>
