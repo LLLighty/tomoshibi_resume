@@ -20,5 +20,6 @@
             <img src="{{ "border-home1.png" | relURL }}" alt="border-home1" />
         </div>
         <footer>{{ partial "footer.html" . }}</footer>
+        {{ if .IsHome }}{{ partial "feedback-widget.html" . }}{{ end }}
     </body>
 </html>

@@ -1,0 +1,157 @@
+{{ define "main" }}
+{{ $video := .Params.video | replaceRE "^/" "" | relURL }}
+{{ $zip := .Params.zip | replaceRE "^/" "" | relURL }}
+
+<article class="case-study frostline-case">
+  <header class="case-hero frostline-hero">
+    <div>
+      <p class="eyebrow">{{ .Params.subtitle }}</p>
+      <h1>{{ .Title }}</h1>
+      <p class="case-lead">以 AI 作为策划与实现加速器，在两天内完成 Frostline 魔法冰钓 Demo：从玩法规则、数值公式、数据配置、Prompt 迭代到 Godot 原型落地，形成可游玩、可说明、可交付的完整小型项目。</p>
+      <div class="archive-tags frostline-tags">
+        <span>AI Prompt</span>
+        <span>Godot</span>
+        <span>系统规则</span>
+        <span>数值配置</span>
+        <span>快速原型</span>
+        <span>Demo 交付</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="portfolio-card media-card frostline-media">
+    <video controls preload="metadata" playsinline>
+      <source src="{{ $video }}" type="video/mp4">
+      <a href="{{ $video }}">查看 Frostline 说明视频</a>
+    </video>
+    <div class="button-row media-actions">
+      <a class="pixel-button" href="{{ $video }}" target="_blank" rel="noopener noreferrer">预览视频</a>
+      <a class="pixel-button" href="{{ $zip }}" download>下载游戏文件包</a>
+    </div>
+  </section>
+
+  <section class="case-grid">
+    <div class="portfolio-card">
+      <h2>项目概览</h2>
+      <p>Frostline 是一个魔法冰钓主题 Demo。玩家在一局 10 次抛竿机会中选择冰洞与鱼竿，完成抛竿、鱼讯判断、搏鱼、冻结水流、捞鱼 QTE 与最终结算。</p>
+      <p>当前版本没有商店、鱼饵、存档和永久养成，重点验证单局循环、鱼种差异、祝福构筑和可配置数值框架。</p>
+    </div>
+    <div class="portfolio-card">
+      <h2>我的 AI 工作流</h2>
+      <ul>
+        <li>将玩法目标拆成规则、流程、数值、UI 与资源配置任务。</li>
+        <li>用 Prompt 约束 AI 输出可执行脚本、数据结构和测试清单。</li>
+        <li>持续校对 AI 结果，统一术语、公式和 Godot 资源位置。</li>
+        <li>把原型实现反向整理成规则文档，便于复盘和展示。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="portfolio-card">
+    <h2>两天速成路径</h2>
+    <div class="flow-row frostline-flow">
+      <span>玩法概念</span>
+      <span>规则拆解</span>
+      <span>Prompt 输出</span>
+      <span>Godot 实现</span>
+      <span>数值校验</span>
+      <span>视频与包体交付</span>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="case-section-title">核心玩法系统</h2>
+    <div class="module-grid">
+      <div class="portfolio-card module-card">
+        <p class="eyebrow">Loop</p>
+        <h3>10 次抛竿单局循环</h3>
+        <p>每次抛竿前重新选择冰洞与鱼竿，成功与失败都会消耗机会，10 次结束后进入最终结算。</p>
+      </div>
+      <div class="portfolio-card module-card">
+        <p class="eyebrow">Choice</p>
+        <h3>冰洞与鱼竿选择</h3>
+        <p>冰洞影响鱼种权重，鱼竿改变追踪区、张力、提竿窗口和 QTE 容错，形成稳定与高风险路线。</p>
+      </div>
+      <div class="portfolio-card module-card">
+        <p class="eyebrow">Timing</p>
+        <h3>鱼讯与提竿</h3>
+        <p>初始等待、试探、正式咬钩与提竿窗口共同构成反应判断；过早和过晚都会失败。</p>
+      </div>
+      <div class="portfolio-card module-card">
+        <p class="eyebrow">Battle</p>
+        <h3>搏鱼追踪与张力</h3>
+        <p>按住左键收线并上移追踪区，松开泄力；捕获进度、鱼线张力和鱼类爆发共同制造操作压力。</p>
+      </div>
+      <div class="portfolio-card module-card">
+        <p class="eyebrow">Skill</p>
+        <h3>冻结水流</h3>
+        <p>一局只能使用一次，在搏鱼阶段降低鱼速并阻止新爆发，作为关键时刻的战术按钮。</p>
+      </div>
+      <div class="portfolio-card module-card">
+        <p class="eyebrow">Build</p>
+        <h3>随机祝福构筑</h3>
+        <p>前 9 次成功捕鱼后可选择祝福，词条最多 3 层，并通过两件组合激活鱼竿构筑路线。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio-card">
+    <h2>数值与规则公式</h2>
+    <div class="table-wrap">
+      <table class="case-table">
+        <thead>
+          <tr>
+            <th>系统</th>
+            <th>核心公式 / 规则</th>
+            <th>设计目的</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>鱼种抽取</td><td>基础权重 × 冰洞倍率 × 距离倍率 × 稀有鱼祝福倍率</td><td>让冰洞、距离和祝福共同影响风险收益。</td></tr>
+          <tr><td>捕获进度</td><td>24 × 鱼竿捕获倍率 ÷ 鱼类捕获难度 ÷ 重量战斗倍率</td><td>把装备、鱼种和重量转化为可感知难度。</td></tr>
+          <tr><td>鱼线张力</td><td>鱼基础拉力 + 爆发拉力 + 收线张力 / 泄力速度</td><td>制造“追进度”和“保张力”的持续权衡。</td></tr>
+          <tr><td>单鱼得分</td><td>floor(基础分 × 重量加成 × 稀有度倍率)</td><td>奖励稀有鱼、巨物和高风险冰洞选择。</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="case-grid">
+    <div class="portfolio-card">
+      <h2>Prompt 输出能力</h2>
+      <p>这个 Demo 的重点不是“让 AI 自动做游戏”，而是把 AI 当作高频协作对象：我负责拆任务、定边界、校对结果，并把输出转化成可运行脚本和可维护规则。</p>
+      <ul>
+        <li>将“冰钓 Roguelite”拆为单局循环、鱼类数据、装备差异、祝福构筑和结算评价。</li>
+        <li>要求 AI 按 Godot 节点、资源文件和脚本职责输出，减少抽象描述。</li>
+        <li>通过规则文档回收实现细节，形成可复查的策划案和配置索引。</li>
+      </ul>
+    </div>
+    <div class="portfolio-card">
+      <h2>交付内容</h2>
+      <ul>
+        <li>可游玩的 Godot Demo 包体。</li>
+        <li>2 分钟说明视频，展示核心流程和规则。</li>
+        <li>完整规则说明，覆盖玩家规则、公式、数据表和配置位置。</li>
+        <li>AI 辅助工作流证明：从概念到可玩原型的快速闭环。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="portfolio-card">
+    <h2>配置落地</h2>
+    <p class="case-note">Demo 将规则拆入 Godot 资源与脚本，便于扩展鱼类、鱼竿、冰洞和祝福。</p>
+    <div class="compact-grid frostline-config-grid">
+      <p><strong>Rules：</strong>全局次数、重量品质、冻结、QTE 和距离阈值。</p>
+      <p><strong>Fishes：</strong>鱼类基础信息、重量、鱼讯、移动、搏鱼和爆发。</p>
+      <p><strong>IceHoles：</strong>冰洞鱼种列表、基础权重和距离倍率。</p>
+      <p><strong>Rods：</strong>追踪、张力、提竿窗口和 QTE 参数。</p>
+    </div>
+  </section>
+
+  <section class="portfolio-card">
+    <h2>设计复盘</h2>
+    <p>Frostline 的价值在于证明我可以用 AI 快速扩大个人产能：先明确玩法目标，再把 Prompt 变成结构化任务，最后通过实现、测试和文档反向校准设计。</p>
+    <p>这个项目展示的是“策划主导 AI”的能力，而不是简单调用工具。AI 负责加速生成，我负责判断什么能玩、什么可配、什么值得留下。</p>
+  </section>
+</article>
+{{ end }}

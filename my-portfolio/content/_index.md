@@ -73,4 +73,10 @@ title = "角色设计：巽 · 泽菲尔（风）"
 tags = "商业项目 / Character Design / Gameplay Design"
 summary = "从角色定位、战斗循环、技能机制到配表、UI、美术需求与 VR 动作识别，完整设计控制型角色‘巽 · 泽菲尔’的战斗体验。"
 href = "/write/zephyr-character-design/"
+
+[[featuredProjects]]
+title = "AI辅助两天速成Demo原型"
+tags = "个人项目 / AI Workflow / Godot Prototype"
+summary = "两天内完成 Frostline 魔法冰钓 Demo，重点展示 AI 辅助策划拆解、Prompt 输出、规则配置与快速原型落地能力。"
+href = "/write/frostline-ai-demo/"
 +++

@@ -1,0 +1,21 @@
+<aside class="feedback-widget" aria-label="站点互动">
+  <button class="feedback-toggle" type="button" aria-expanded="false" aria-controls="feedback-panel">
+    <span aria-hidden="true">♡</span>
+    <span class="feedback-like-count">0</span>
+  </button>
+  <div class="feedback-panel" id="feedback-panel" hidden>
+    <div class="feedback-panel-head">
+      <p class="eyebrow">Guest Note</p>
+      <button class="feedback-close" type="button" aria-label="关闭评论面板">×</button>
+    </div>
+    <button class="feedback-like-button" type="button">
+      <span aria-hidden="true">♡</span>
+      <span>Like</span>
+      <strong class="feedback-like-count">0</strong>
+    </button>
+    <label class="feedback-comment-label" for="feedback-comment">Comment</label>
+    <textarea id="feedback-comment" class="feedback-comment-input" rows="3" maxlength="120" placeholder="留下一句想法..."></textarea>
+    <button class="pixel-button feedback-submit" type="button">发送评论</button>
+    <div class="feedback-comments" aria-live="polite"></div>
+  </div>
+</aside>

@@ -603,6 +603,11 @@ nav a:hover {
   --project-accent-rgb: 255, 112, 77;
 }
 
+.project-card-ai {
+  --project-accent: #ffcf4a;
+  --project-accent-rgb: 255, 207, 74;
+}
+
 .project-card:hover {
   border-color: var(--project-accent);
   box-shadow: 0 0 16px rgba(var(--project-accent-rgb), 0.18);
@@ -643,6 +648,122 @@ nav a:hover {
 .project-card .case-link:hover {
   border-color: var(--project-accent);
   color: var(--project-accent);
+}
+
+.feedback-widget {
+  bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: min(340px, calc(100vw - 2rem));
+  position: fixed;
+  right: 1rem;
+  z-index: 30;
+}
+
+.feedback-toggle,
+.feedback-close,
+.feedback-like-button {
+  appearance: none;
+  background: #111111;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.feedback-toggle {
+  align-items: center;
+  align-self: flex-end;
+  border-color: #ffcf4a;
+  box-shadow: 0 0 12px rgba(255, 207, 74, 0.22);
+  display: inline-flex;
+  gap: 0.4rem;
+  min-height: 44px;
+  padding: 0.55rem 0.75rem;
+}
+
+.feedback-toggle:hover,
+.feedback-toggle.is-liked,
+.feedback-like-button:hover,
+.feedback-like-button.is-liked {
+  border-color: #ffcf4a;
+  color: #ffcf4a;
+}
+
+.feedback-panel {
+  background: #111111;
+  border: 1px solid #ffffff;
+  box-shadow: 0 0 18px rgba(255, 207, 74, 0.12);
+  display: grid;
+  gap: 0.75rem;
+  padding: 0.9rem;
+}
+
+.feedback-panel-head {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.feedback-panel-head .eyebrow {
+  margin: 0;
+}
+
+.feedback-close {
+  border-color: #ffcf4a;
+  color: #ffcf4a;
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 0.25rem 0.45rem;
+}
+
+.feedback-like-button {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 0.55rem 0.75rem;
+}
+
+.feedback-comment-label {
+  color: #ffcf4a;
+  font-size: 0.75rem;
+}
+
+.feedback-comment-input {
+  background: #050505;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-family: inherit;
+  line-height: 1.6;
+  padding: 0.65rem;
+  resize: vertical;
+}
+
+.feedback-comment-input:focus {
+  border-color: #ffcf4a;
+  outline: none;
+}
+
+.feedback-submit {
+  justify-self: start;
+}
+
+.feedback-comments {
+  display: grid;
+  gap: 0.5rem;
+  max-height: 160px;
+  overflow: auto;
+}
+
+.feedback-comment {
+  border-left: 3px solid #ffcf4a;
+  color: #d1d5db;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0.45rem 0.6rem;
 }
 
 .experience-card {
@@ -951,6 +1072,43 @@ nav a:hover {
   overflow-wrap: anywhere;
 }
 
+.frostline-case {
+  --frostline-accent: #ffcf4a;
+}
+
+.frostline-hero .case-lead {
+  max-width: 74ch;
+}
+
+.frostline-tags span {
+  border-color: var(--frostline-accent);
+  color: var(--frostline-accent);
+}
+
+.frostline-media {
+  border-color: var(--frostline-accent);
+}
+
+.frostline-flow span {
+  border-color: var(--frostline-accent);
+}
+
+.frostline-case .module-card .eyebrow,
+.frostline-case .module-card h3,
+.frostline-case .case-note {
+  color: var(--frostline-accent);
+}
+
+.frostline-config-grid p {
+  border: 1px solid rgba(255, 207, 74, 0.45);
+  border-radius: 0.35rem;
+  padding: 0.75rem;
+}
+
+.frostline-case .case-table th {
+  color: var(--frostline-accent);
+}
+
 .case-actions {
   margin-top: -0.5rem;
 }
@@ -1207,4 +1365,16 @@ nav a:hover {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+}
+
+@media (max-width: 640px) {
+  .feedback-widget {
+    bottom: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .feedback-panel {
+    max-height: calc(100vh - 6rem);
+    overflow: auto;
+  }
 }

@@ -60,6 +60,10 @@
 				{{ $typeClass = "project-card-combat" }}
 				{{ $typeLabel = "Character Combat" }}
 				{{ $typeIcon = "✦" }}
+			{{ else if in .title "AI" }}
+				{{ $typeClass = "project-card-ai" }}
+				{{ $typeLabel = "AI Prototype" }}
+				{{ $typeIcon = "⌁" }}
 			{{ end }}
 			<article class="portfolio-card project-card {{ $typeClass }}">
 				<div class="project-type-badge">
