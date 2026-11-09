@@ -1,0 +1,92 @@
+{{ define "main" }}
+<article class="case-study chocofac-case">
+  <a class="case-link" href="{{ "write/" | relURL }}">返回作品集</a>
+  <header class="case-hero case-hero-split">
+    <div>
+      <p class="eyebrow">独立研发 · 桌面放置经营</p>
+      <h1>{{ .Title }}</h1>
+      <p class="case-lead">{{ .Params.teaser }}</p>
+      {{ with .Params.projectTags }}
+        <ul class="chocofac-project-tags" role="list" aria-label="项目标签">
+          {{ range . }}<li>{{ . }}</li>{{ end }}
+        </ul>
+      {{ end }}
+    </div>
+    <aside class="portfolio-card info-card">
+      <h2>项目信息</h2>
+      <dl>
+        <div><dt>职责</dt><dd>系统设计、原型实现与验证</dd></div>
+        <div><dt>工具</dt><dd>Godot / GDScript</dd></div>
+        <div><dt>阶段</dt><dd>美术素材与流程优化</dd></div>
+      </dl>
+    </aside>
+  </header>
+  {{ with .Params.demoVideo }}
+    {{ $video := . | relURL }}
+    <section class="portfolio-card media-card" aria-labelledby="chocofac-demo-title">
+      <h2 id="chocofac-demo-title">实机演示</h2>
+      <video controls preload="metadata" playsinline aria-labelledby="chocofac-demo-title"{{ with $.Params.demoPoster }} poster="{{ . | relURL }}"{{ end }}>
+        <source src="{{ $video }}" type="video/mp4">
+        <a href="{{ $video }}">查看 ChocoFac 演示视频</a>
+      </video>
+      <div class="button-row media-actions">
+        <a class="pixel-button" href="{{ $video }}" target="_blank" rel="noopener noreferrer">在新标签页打开视频</a>
+      </div>
+    </section>
+  {{ end }}
+  {{ with .Params.designHighlights }}
+    <section class="chocofac-highlights" aria-labelledby="chocofac-highlights-title">
+      <h2 id="chocofac-highlights-title" class="case-section-title">设计亮点</h2>
+      <div class="module-grid">
+        {{ range . }}
+          <div class="portfolio-card module-card">
+            <h3>{{ .title }}</h3>
+            <p>{{ .description }}</p>
+          </div>
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+  {{ with .Params.developmentStages }}
+    <section class="portfolio-card chocofac-iterations" aria-labelledby="chocofac-iterations-title">
+      <h2 id="chocofac-iterations-title">从原型到迭代</h2>
+      {{ with $.Params.iterationSummary }}<p class="chocofac-iteration-summary">{{ . }}</p>{{ end }}
+      {{ range . }}
+        <div class="chocofac-stage">
+          <h3>{{ .title }}</h3>
+          <p>{{ .description }}</p>
+          {{ with .decisions }}
+            <div class="chocofac-decisions">
+              {{ range . }}
+                <div class="chocofac-decision">
+                  <h4>{{ .title }}</h4>
+                  <p><strong>发现问题</strong> {{ .problem }}</p>
+                  <p><strong>迭代做法</strong> {{ .change }}</p>
+                  <p class="project-tags">{{ .skills }}</p>
+                </div>
+              {{ end }}
+            </div>
+          {{ end }}
+          <div class="chocofac-gallery">
+            {{ range .screenshots }}
+              {{ $image := printf "images/chocofac/%s" .file | relURL }}
+              <figure class="chocofac-shot{{ if .wide }} chocofac-shot-wide{{ end }}">
+                <a href="{{ $image }}" target="_blank" rel="noopener" aria-label="查看原图：{{ .title }}">
+                  <img src="{{ $image }}" width="{{ .width }}" height="{{ .height }}" alt="{{ .alt }}" loading="lazy" decoding="async">
+                </a>
+                <figcaption>
+                  <h4>{{ .title }}</h4>
+                  <p>{{ .description }}</p>
+                </figcaption>
+              </figure>
+            {{ end }}
+          </div>
+        </div>
+      {{ end }}
+    </section>
+  {{ end }}
+  <div class="portfolio-card case-prose">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

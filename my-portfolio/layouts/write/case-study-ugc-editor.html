@@ -9,6 +9,7 @@
 {{ $imgExport := "images/ugc-editor/export-panel.png" | relURL }}
 
 <article class="case-study ugc-case">
+  {{ partial "project-navigation.html" . }}
   <header class="case-hero ugc-hero">
     <div class="portfolio-card">
       <p class="eyebrow">{{ .Params.subtitle }}</p>

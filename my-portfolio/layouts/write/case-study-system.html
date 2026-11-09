@@ -3,6 +3,7 @@
 {{ $settingsPdf := .Params.settingsPdf | replaceRE "^/" "" | relURL }}
 
 <article class="case-study">
+  {{ partial "project-navigation.html" . }}
   <header class="case-hero case-hero-split">
     <div>
       <p class="eyebrow">{{ .Params.subtitle }}</p>

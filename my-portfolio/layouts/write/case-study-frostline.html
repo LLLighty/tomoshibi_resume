@@ -3,6 +3,7 @@
 {{ $zip := .Params.zip | replaceRE "^/" "" | relURL }}
 
 <article class="case-study frostline-case">
+  <a class="case-link" href="{{ "write/" | relURL }}">返回作品集</a>
   <header class="case-hero frostline-hero">
     <div>
       <p class="eyebrow">{{ .Params.subtitle }}</p>

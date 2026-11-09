@@ -1,0 +1,17 @@
+{{ $current := . }}
+{{ $project := . }}
+{{ with .Params.parentProject }}
+  {{ $project = site.GetPage . }}
+{{ end }}
+<nav class="project-navigation" aria-label="{{ $project.Params.projectNavigationTitle | default $project.Title }}内容">
+  <a class="project-navigation-back" href="{{ "write/" | relURL }}">← 返回作品集</a>
+  <div class="button-row">
+    <a class="pixel-button" href="{{ $project.RelPermalink }}"{{ if eq $current.RelPermalink $project.RelPermalink }} aria-current="page"{{ end }}>{{ $project.Params.projectOverviewTabLabel | default "项目概览" }}</a>
+    {{ range $project.Params.projectSections }}
+      {{ $label := .label }}
+      {{ with site.GetPage .page }}
+        <a class="pixel-button" href="{{ .RelPermalink }}"{{ if eq $current.RelPermalink .RelPermalink }} aria-current="page"{{ end }}>{{ $label }}</a>
+      {{ end }}
+    {{ end }}
+  </div>
+</nav>

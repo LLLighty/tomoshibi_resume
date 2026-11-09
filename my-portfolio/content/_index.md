@@ -1,82 +1,74 @@
 +++
 portraitImage = "/portrait.png"
-
-heroTitle = "小灯（佟天琪）"
-heroSubtitle = "战斗&系统策划"
-heroTags = "三端 · ARPG · 类魂 · 格斗"
-heroBody = "一年商业游戏研发经验，参与出海 VR/PC 动作竞技项目从 0 到 1 的 Gameplay 设计，负责战斗机制、角色技能、系统架构及 UGC 编辑器、多语本地化等内容。擅长从玩家体验出发拆解玩法，结合数据分析与原型验证推动设计落地，目前专注于提升战斗与关卡设计能力，并持续制作个人 Gameplay Demo。"
-
-playerBackground = "3000+ 小时主机与PC&手游经历，覆盖魂系、开放世界、动作 RPG、JRPG、CRPG、独立游戏与二次元手游。长期关注系统拆解、战斗机制、关卡结构与叙事体验。"
+heroTitle = "佟天琪（小灯）"
+heroSubtitle = "游戏系统策划"
+heroTags = "经营循环 · 成长解锁 · 功能流程 · UGC 工具"
+heroBody = "有一年以上商业游戏研发经验，曾负责 VR/PC 竞技项目的三端系统和 UGC 谱面编辑器。独立开发桌面放置经营游戏《代号 ChocoFac》，将生产、库存、销售与章节解锁做成可运行的 Godot 原型，正在优化美术与流程。"
+steamProfileURL = "https://steamcommunity.com/id/DONUTTANSY/"
 
 musicLabel = "正在听"
 musicTitle = "Aerith's Theme"
 musicArtist = "Final Fantasy VII"
 musicFile = "/music/aeriths-theme.mp3"
 
-[[heroButtons]]
-label = "查看项目"
-href = "#featured-projects"
+[[designWorks]]
+title = "VR 跆拳道动捕格斗游戏"
+label = "商业研发 · Virtual Taekwondo / 代号 TFG"
+description = "参与 VR/PC 动捕格斗研发，负责角色技能、战斗反馈与三端系统设计。"
+image = "images/design-works/tfg-combat.jpg"
+imageAlt = "代号 TFG 中泽菲尔的对战技能演示画面"
+imageNote = "画面来自代号 TFG 的泽菲尔技能演示"
+href = "write/tfg/"
+action = "进入 TFG 项目"
+
+[[designWorks]]
+title = "Frostline｜AI辅助钓鱼游戏原型"
+label = "个人项目 · Godot 可玩原型"
+description = "用两天把选冰洞、鱼线张力和增益选择做成可下载试玩的冰钓原型。"
+image = "images/design-works/frostline.png"
+imageAlt = "Frostline《暮冰垂钓》标题画面，左侧为冰湖钓鱼场景，右侧是游戏标题与开始按钮"
+href = "write/frostline-ai-demo/"
+action = "查看冰钓原型"
+
+[[designWorks]]
+title = "《代号 ChocoFac》| 模拟经营挂机游戏"
+label = "独立研发 · 2D 经营与探索"
+description = "设计巧克力与糖果双店经营，让员工自动化、探索和战斗资源相互推动。"
+image = "images/chocofac/iteration-factory.png"
+imageAlt = "ChocoFac 上方经营工厂、下方探索工厂步道的同屏界面"
+href = "write/chocofac/"
+action = "查看经营系统"
 
 [[heroButtons]]
-label = "下载简历"
+label = "浏览全部作品"
+href = "#featured-projects"
+style = "primary"
+
+[[heroButtons]]
+label = "下载系统策划简历"
 href = "/files/tong-tianqi-resume.pdf"
 download = true
+style = "outline"
 
 [[heroButtons]]
-label = "联系方式"
+label = "联系我"
 href = "#contact"
 
 [[snapshot]]
-label = "学历"
-value = "杜伦大学（QS86）\n犯罪学 · 本科"
+label = "求职方向"
+value = "游戏系统策划 · 上海优先"
 
 [[snapshot]]
-label = "商业项目经验"
-value = "1 年"
+label = "商业研发"
+value = "VSPO 英雄电竞 · 2025.04–2026.06"
+link = { label = "Virtual Taekwondo 官网", href = "https://virtualtkd.gg/" }
 
 [[snapshot]]
-label = "主要方向"
-value = "系统设计 / 玩法策划"
+label = "独立研发"
+value = "桌面放置经营 · Godot / GDScript"
 
 [[snapshot]]
-label = "核心能力"
-value = "从0-1进行玩法构筑、战斗规则、系统设计、UGC、AI工作流的设计"
+label = "教育"
+value = "杜伦大学 · 犯罪学本科"
 
-[[snapshot]]
-label = "游戏经历"
-value = "3000+ 小时主机与PC&手游"
-
-[[snapshot]]
-label = "正在深入"
-value = "▸ ARPG\n▸ FPS & TPS\n▸ 类魂"
-
-[[featuredProjects]]
-title = "VR动捕音游原型设计与实现"
-tags = "商业项目 / VR / Gameplay"
-summary = "负责设计局外音游玩法的核心循环，包括音符交互、评分、连击、血量与玩家反馈。"
-href = "/write/vspo-tfg/"
-
-[[featuredProjects]]
-title = "UGC 谱面编辑器"
-tags = "商业项目 / UGC / 工具设计"
-summary = "设计用户生成音乐谱面编辑器，覆盖时间轴编辑、音符放置、试玩验证与数据结构规划。"
-href = "/write/ugc-chart-editor/"
-
-[[featuredProjects]]
-title = "三端系统架构"
-tags = "商业项目 / System Design / VR-PC"
-summary = "为 VR 电竞项目设计 Player、GM、Spectator 三端的权限边界与工作流，并将登录、设置、顶号、异常处理等基础系统整理为可配置方案。"
-href = "/write/three-client-architecture/"
-
-[[featuredProjects]]
-title = "角色设计：巽 · 泽菲尔（风）"
-tags = "商业项目 / Character Design / Gameplay Design"
-summary = "从角色定位、战斗循环、技能机制到配表、UI、美术需求与 VR 动作识别，完整设计控制型角色‘巽 · 泽菲尔’的战斗体验。"
-href = "/write/zephyr-character-design/"
-
-[[featuredProjects]]
-title = "AI辅助两天速成Demo原型"
-tags = "个人项目 / AI Workflow / Godot Prototype"
-summary = "两天内完成 Frostline 魔法冰钓 Demo，重点展示 AI 辅助策划拆解、Prompt 输出、规则配置与快速原型落地能力。"
-href = "/write/frostline-ai-demo/"
 +++

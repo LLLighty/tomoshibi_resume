@@ -1,82 +1,60 @@
 {{ define "main" }}
 {{ $p := .Params }}
-
 <section class="home-hero">
-	<div class="portfolio-card hero-profile">
-		<img src="{{ (or $p.portraitImage "/portrait.png") | replaceRE "^/" "" | relURL }}" alt="{{ or $p.heroTitle "小灯（佟天琪）" }}" class="hero-portrait">
-		<div class="hero-copy">
-			<h1>{{ or $p.heroTitle "小灯 / Carol Tong" }}</h1>
-			<p class="hero-subtitle">{{ or $p.heroSubtitle "System Designer / Gameplay Designer" }}</p>
-			<p class="hero-tags">{{ or $p.heroTags "VR · PC · UGC · Gameplay · System Design" }}</p>
-			<p>{{ or $p.heroBody "一年商业游戏开发经验，参与 VR/PC 双端格斗与节奏玩法项目，负责系统架构、玩法系统、UGC 编辑器与多端交互流程设计。" }}</p>
-			<div class="button-row">
-				{{ range $p.heroButtons }}
-					{{ $href := .href }}
-					{{ if hasPrefix $href "/" }}
-						{{ $href = $href | replaceRE "^/" "" | relURL }}
-					{{ end }}
-					<a class="pixel-button" href="{{ $href }}"{{ if .download }} download{{ end }}>{{ .label }}</a>
-				{{ end }}
-			</div>
-		</div>
-	</div>
-
-	<div class="portfolio-card snapshot-card">
-		<p class="eyebrow">职业概览</p>
-		<dl class="snapshot-list">
-			{{ range $p.snapshot }}
-				<div>
-					<dt>{{ .label }}</dt>
-					<dd>{{ .value | markdownify }}</dd>
-				</div>
-			{{ end }}
-		</dl>
-	</div>
+  <div class="portfolio-card hero-profile">
+    <img src="{{ $p.portraitImage | replaceRE "^/" "" | relURL }}" alt="" class="hero-portrait">
+    <div class="hero-copy">
+      <h1>{{ $p.heroTitle }}</h1>
+      <p class="hero-subtitle">{{ $p.heroSubtitle }}</p>
+      <p class="hero-tags">{{ $p.heroTags }}</p>
+      <p>{{ $p.heroBody }}</p>
+      <div class="button-row hero-actions">
+        {{ range $p.heroButtons }}
+          {{ $href := .href }}
+          {{ if hasPrefix $href "/" }}{{ $href = $href | replaceRE "^/" "" | relURL }}{{ end }}
+          <a class="hero-action hero-action-{{ .style | default "text" }}" href="{{ $href }}"{{ if .download }} download{{ end }}>{{ .label }}</a>
+        {{ end }}
+        {{ with $p.steamProfileURL }}
+          <a class="hero-action hero-action-text" href="{{ . }}" target="_blank" rel="noopener noreferrer">Steam 主页</a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  <div class="portfolio-card snapshot-card">
+    <p class="eyebrow">职业概览</p>
+    <dl class="snapshot-list">
+      {{ range $p.snapshot }}
+        <div>
+          <dt>{{ .label }}</dt>
+          <dd>{{ .value }}{{ with .link }}<br><a class="pixel-button snapshot-link" href="{{ .href }}" target="_blank" rel="noopener noreferrer">{{ .label }}</a>{{ end }}</dd>
+        </div>
+      {{ end }}
+    </dl>
+  </div>
 </section>
 
-<section id="featured-projects" class="home-section">
-	<div class="section-heading">
-		<h2>代表项目</h2>
-		<p>精选展示战斗设计、系统设计与落地思考的项目内容。</p>
-	</div>
-	<div class="project-grid">
-		{{ range $p.featuredProjects }}
-			{{ $caseHref := .href }}
-			{{ if hasPrefix $caseHref "/" }}
-				{{ $caseHref = $caseHref | replaceRE "^/" "" | relURL }}
-			{{ end }}
-			{{ $typeClass := "project-card-gameplay" }}
-			{{ $typeLabel := "Gameplay" }}
-			{{ $typeIcon := "▶" }}
-			{{ if in .title "UGC" }}
-				{{ $typeClass = "project-card-tool" }}
-				{{ $typeLabel = "Tool" }}
-				{{ $typeIcon = "▣" }}
-			{{ else if in .title "三端" }}
-				{{ $typeClass = "project-card-system" }}
-				{{ $typeLabel = "System" }}
-				{{ $typeIcon = "▤" }}
-			{{ else if in .title "角色" }}
-				{{ $typeClass = "project-card-combat" }}
-				{{ $typeLabel = "Character Combat" }}
-				{{ $typeIcon = "✦" }}
-			{{ else if in .title "AI" }}
-				{{ $typeClass = "project-card-ai" }}
-				{{ $typeLabel = "AI Prototype" }}
-				{{ $typeIcon = "⌁" }}
-			{{ end }}
-			<article class="portfolio-card project-card {{ $typeClass }}">
-				<div class="project-type-badge">
-					<span aria-hidden="true">{{ $typeIcon }}</span>
-					<span>{{ $typeLabel }}</span>
-				</div>
-				<p class="project-tags">{{ .tags }}</p>
-				<h3>{{ .title }}</h3>
-				<p>{{ .summary }}</p>
-				<a class="case-link" href="{{ $caseHref }}">查看案例</a>
-			</article>
-		{{ end }}
-	</div>
+<section id="featured-projects" class="home-section" aria-labelledby="portfolio-title">
+  <h2 id="portfolio-title" class="sr-only">作品展示</h2>
+  {{ with $p.designWorks }}
+    <section id="design-works" class="project-category design-works" aria-labelledby="design-works-title">
+      <h3 id="design-works-title">设计作品</h3>
+      <div class="project-grid">
+        {{ range . }}
+          <article class="portfolio-card project-card design-work-card">
+            <img class="design-work-cover" src="{{ .image | relURL }}" alt="{{ .imageAlt }}" loading="lazy" decoding="async">
+            <h4>{{ .title }}</h4>
+            <p class="project-tags">{{ .label }}</p>
+            <p class="project-contribution">{{ .description }}</p>
+            {{ with .imageNote }}<p class="design-work-note">{{ . }}</p>{{ end }}
+            <a class="case-link" href="{{ .href | relURL }}">{{ .action }}</a>
+          </article>
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+  {{ with where (site.GetPage "/write").RegularPages.ByWeight "Params.portfoliogroup" "in" (slice "analysis" "design-exercises") }}
+    {{ partial "home-project-group.html" (dict "group" (dict "key" "analysis" "title" "设计练习与拆解") "pages" .) }}
+  {{ end }}
 </section>
 
 <section class="home-section">
@@ -181,15 +159,17 @@
 		<div>
 			<p class="eyebrow">Player Profile</p>
 			<h3>从玩家经验进入设计拆解</h3>
-			<p>累计体验 600+ 款游戏，3000+小时跨平台游玩经历，覆盖 Steam、PS、NS、3DS、移动 等平台。主要关注战斗玩法、Gameplay、关卡设计与叙事。</p>
+			<p>累计体验 800+ 款游戏，3000+小时跨平台游玩经历，覆盖 Steam、PS、NS、3DS、移动 等平台。主要关注战斗玩法、Gameplay、关卡设计与叙事。</p>
 		</div>
 		<div class="archive-stats">
-			<div><span>600+</span><small>体验作品</small></div>
+			<div><span>800+</span><small>体验作品</small></div>
 			<div><span>3000+</span><small>游戏时长</small></div>
 			<div><span>5+</span><small>覆盖平台</small></div>
 			<div><span>4</span><small>研究方向</small></div>
 		</div>
-		<a class="pixel-button archive-steam-link" href="https://steamcommunity.com/id/DONUTTANSY/" target="_blank" rel="noopener noreferrer">查看 Steam 主页</a>
+		{{ with $p.steamProfileURL }}
+			<a class="pixel-button archive-steam-link" href="{{ . }}" target="_blank" rel="noopener noreferrer">查看 Steam 主页</a>
+		{{ end }}
 	</div>
 
 	{{ $impactGames := slice

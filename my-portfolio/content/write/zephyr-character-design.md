@@ -2,6 +2,11 @@
 title = "角色设计：巽 · 泽菲尔（风）"
 date = 2026-06-30T20:30:00+08:00
 draft = false
+weight = 5
+portfolioGroup = "gameplay"
+parentProject = "/write/tfg"
+portfolioLabel = "商业项目 · 角色与技能"
+portfolioContribution = "设计泽菲尔的控场技能、战斗循环和 VR 动作识别规则。"
 tags = ["write"]
 listIcon = "/writing.png"
 layout = "case-study-zephyr"

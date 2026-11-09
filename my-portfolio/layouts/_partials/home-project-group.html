@@ -1,0 +1,13 @@
+<section class="project-category" aria-labelledby="portfolio-{{ .group.key }}">
+  <h3 id="portfolio-{{ .group.key }}">{{ .group.title }}</h3>
+  <div class="project-grid">
+    {{ range .pages }}
+      <article class="portfolio-card project-card project-card-{{ $.group.key }}">
+        <h4>{{ .LinkTitle }}</h4>
+        {{ with .Params.portfoliolabel }}<p class="project-tags">{{ . }}</p>{{ end }}
+        <p class="project-contribution">{{ or .Params.portfoliocontribution .Params.teaser (.Summary | plainify) }}</p>
+        <a class="case-link" href="{{ .RelPermalink }}">查看作品 <span class="sr-only">{{ .LinkTitle }}</span></a>
+      </article>
+    {{ end }}
+  </div>
+</section>

@@ -1,0 +1,32 @@
+{{ define "main" }}
+<section class="portfolio-index" aria-labelledby="portfolio-index-title">
+  <h1 id="portfolio-index-title">{{ .Title }}</h1>
+  {{ .Content }}
+  <div class="portfolio-index-list">
+    {{ range where .RegularPages.ByWeight "Params.parentproject" "eq" nil }}
+      {{ $group := .Params.portfolioGroup | default "" }}
+      <a class="portfolio-index-card block{{ if in (slice "analysis" "design-exercises") $group }} portfolio-index-card-study{{ end }}" href="{{ .RelPermalink }}">
+        <article>
+          <div class="portfolio-index-meta">
+            <span>{{ .Params.portfolioLabel | default "设计作品" }}</span>
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time>
+          </div>
+          <h2>{{ .LinkTitle }}</h2>
+          {{ with or .Params.portfolioContribution .Params.teaser .Summary }}<p>{{ . | plainify | truncate 140 }}</p>{{ end }}
+          <span class="portfolio-index-action">查看作品 <span aria-hidden="true">→</span></span>
+        </article>
+      </a>
+    {{ end }}
+    {{ range .Params.externalLinks }}
+      <a class="portfolio-index-card block" href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+        <article>
+          <div class="portfolio-index-meta"><span>外部作品</span><time datetime="{{ .date }}">{{ .date }}</time></div>
+          <h2>{{ .title }}</h2>
+          {{ with .teaser }}<p>{{ . | plainify | truncate 140 }}</p>{{ end }}
+          <span class="portfolio-index-action">查看作品 <span aria-hidden="true">↗</span></span>
+        </article>
+      </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

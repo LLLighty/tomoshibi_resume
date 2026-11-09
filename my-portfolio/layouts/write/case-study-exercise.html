@@ -1,0 +1,40 @@
+{{ define "main" }}
+{{ $project := . }}
+{{ with .Params.parentProject }}{{ $project = site.GetPage . }}{{ end }}
+{{ $side := eq $project.Params.projectNavigation "side" }}
+{{ if $side }}
+<div class="project-side-layout">
+  {{ partial "project-navigation.html" . }}
+{{ end }}
+<article class="case-study">
+  {{ if not $side }}{{ partial "project-navigation.html" . }}{{ end }}
+  <header class="case-hero">
+    <p class="eyebrow">{{ .Params.projectContext }}</p>
+    <h1>{{ .Title }}</h1>
+    <p class="case-lead">{{ .Params.teaser }}</p>
+  </header>
+  {{ with .Params.figures }}
+    <section class="portfolio-card" aria-label="设计图">
+      <h2>{{ if eq (len .) 1 }}养成循环图{{ else }}主要界面原型{{ end }}</h2>
+      <div{{ if gt (len .) 1 }} class="case-grid"{{ end }}>
+        {{ range . }}
+          {{ $url := printf "images/system-design-exercises/%s" .file | relURL }}
+          <figure class="exercise-figure">
+            <a href="{{ $url }}" target="_blank" rel="noopener" aria-label="查看原图：{{ .title }}">
+              <img src="{{ $url }}" width="{{ .width }}" height="{{ .height }}" alt="{{ .title }}"{{ if not $side }} loading="lazy"{{ end }} decoding="async">
+            </a>
+            <figcaption>
+              <h3>{{ .title }}</h3>
+              <p>{{ .description }}</p>
+            </figcaption>
+          </figure>
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+  <div class="portfolio-card case-prose exercise-prose">
+    {{ .Content }}
+  </div>
+</article>
+{{ if $side }}</div>{{ end }}
+{{ end }}

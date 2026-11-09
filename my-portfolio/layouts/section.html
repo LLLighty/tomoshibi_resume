@@ -44,6 +44,9 @@
 
   {{ $tag := .Section }}
   {{ $posts := where site.RegularPages "Params.tags" "intersect" (slice $tag) }}
+  {{ if eq $tag "write" }}
+    {{ $posts = where $posts "Params.parentproject" "eq" nil }}
+  {{ end }}
   {{ $posts = sort $posts "Date" "desc" }}
 
   {{/* Get external links from front matter */}}
@@ -67,6 +70,18 @@
 
   {{/* Sort all items by sortDate (newest first) */}}
   {{ $allItems = sort $allItems "sortDate" "desc" }}
+
+  {{ if eq .Section "write" }}
+    {{ $rankedItems := slice }}
+    {{ range $allItems }}
+      {{ $rank := 100 }}
+      {{ if eq .type "post" }}
+        {{ $rank = or .data.Weight 100 }}
+      {{ end }}
+      {{ $rankedItems = $rankedItems | append (merge . (dict "rank" $rank)) }}
+    {{ end }}
+    {{ $allItems = sort $rankedItems "rank" "asc" }}
+  {{ end }}
 
   {{ if $allItems }}
     <div class="grid gap-6 mt-8">

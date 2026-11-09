@@ -2,6 +2,9 @@
 title = "《Lies of P》系统设计分析"
 date = 2025-03-06T09:00:00+08:00
 draft = false
+layout = "case-study-exercise"
+parentProject = "/write/palworld-progression"
+projectContext = "系统拆解 · 战斗与资源循环"
 tags = ["write"]
 listIcon = "/writing.png"
 teaser = "从战斗、防御、武器组装、军团义手、资源循环、叙事与音乐系统等角度，分析《匹诺曹的谎言》的系统设计完成度与可借鉴之处。"

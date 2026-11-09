@@ -1,0 +1,19 @@
+{{ define "main" }}
+<article class="case-study">
+  {{ partial "project-navigation.html" . }}
+  <header class="case-hero">
+    <p class="eyebrow">{{ .Params.projectContext | default "商业研发 · VSPO 英雄电竞" }}</p>
+    <h1>{{ .Title }}</h1>
+    <p class="case-lead">{{ .Params.teaser }}</p>
+  </header>
+  {{ with .Params.cover }}
+    <figure class="portfolio-card project-overview-cover">
+      <img src="{{ . | relURL }}" alt="{{ $.Params.coverAlt }}">
+      <figcaption>{{ $.Params.coverCaption }}</figcaption>
+    </figure>
+  {{ end }}
+  <div class="portfolio-card case-prose">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}
