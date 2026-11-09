@@ -3,7 +3,6 @@
 {{ $pdf := .Params.pdf | replaceRE "^/" "" | relURL }}
 
 <article class="case-study">
-  {{ partial "project-navigation.html" . }}
   <header class="case-hero">
     <div>
       <p class="eyebrow">{{ .Params.subtitle }}</p>

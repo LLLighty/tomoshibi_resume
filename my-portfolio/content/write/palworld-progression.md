@@ -8,7 +8,6 @@ weight = 5
 portfolioGroup = "analysis"
 portfolioLabel = "设计拆解 · 养成 / 战斗"
 portfolioContribution = "对照《幻兽帕鲁》的养成循环与《Lies of P》的战斗、武器和资源设计。"
-projectNavigation = "side"
 projectNavigationTitle = "游戏系统拆解"
 projectOverviewTabLabel = "幻兽帕鲁"
 projectContext = "系统拆解 · 约 135 小时单人及多人体验"
